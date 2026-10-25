@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nigerian LegalTech Network</title>
+<meta name="description" content="The centre of Nigeria's legal tech ecosystem. NLTN connects lawyers, students, founders, regulators and researchers shaping how technology serves law and justice in Nigeria.">
+<link rel="canonical" href="https://nigerianlegaltech.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nigerian LegalTech Network">
+<meta property="og:url" content="https://nigerianlegaltech.com/">
+<meta property="og:title" content="Nigerian LegalTech Network (NLTN)">
+<meta property="og:description" content="The centre of Nigeria's legal tech ecosystem. Research, guides and events for lawyers, students, founders, regulators and researchers.">
+<meta property="og:image" content="https://i.ibb.co/7dBY6cyy/NLTN-brand-signature-light-background.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nigerian LegalTech Network: The Centre of Nigeria's LegalTech Ecosystem">
+<meta property="og:locale" content="en_NG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nigerian LegalTech Network (NLTN)">
+<meta name="twitter:description" content="The centre of Nigeria's legal tech ecosystem.">
+<meta name="twitter:image" content="https://i.ibb.co/7dBY6cyy/NLTN-brand-signature-light-background.png">
+<meta name="theme-color" content="#FCFCFC">
+<link rel="icon" href="https://i.ibb.co/fzth25Z1/favicon.jpg">
+<link rel="apple-touch-icon" href="https://i.ibb.co/fzth25Z1/favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+SemiExpanded:wght@700..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,300..400,0,0&display=block" rel="stylesheet">
+<style>
+/* NLTN Brand Identity System v1.0: Carbon and Limestone define the identity;
+   Greystone and Greenstone give structure and emphasis, used sparingly.
+   Layout: wide editorial sections, thin rules, mono labels, framed live previews. */
+:root{
+  --carbon:#010101;
+  --limestone:#FCFCFC;
+  --greystone:#979799;
+  --greenstone:#2AACA3;
+  --mist:#E9E9EA;          /* button hover fill (brand spec) */
+  --paper:#F3F3F4;         /* quiet panel tone between Limestone and Mist */
+  --ink-2:#4A4A4D;         /* body copy on Limestone */
+  --line:rgba(1,1,1,.12);
+  --line-dark:rgba(252,252,252,.14);
+  --sans:"Zalando Sans", ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --display:"Zalando Sans SemiExpanded", "Zalando Sans", ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono:"Geist Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --max:1280px;
+  --gutter:clamp(20px,4vw,48px);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{max-width:100%;overflow-x:hidden}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(96px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--limestone);color:var(--carbon);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+img,svg,iframe{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{text-wrap:balance}
+:focus-visible{outline:2px solid var(--greenstone);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.ms{font-family:"Material Symbols Sharp";font-weight:300;font-style:normal;font-size:20px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;-webkit-font-smoothing:antialiased;font-variation-settings:"opsz" 20;width:1em;overflow:hidden;flex:none}
+.label{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.muted{color:var(--greystone)}
+
+/* Buttons: brand default = white fill, Greystone border, Carbon text, Mist on hover */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:500 15px/1 var(--sans);text-decoration:none;padding:13px 20px;border:1px solid var(--greystone);background:#fff;color:var(--carbon);cursor:pointer;transition:background .2s,border-color .2s,color .2s;white-space:nowrap}
+.btn:hover{background:var(--mist)}
+.btn-solid{background:var(--carbon);border-color:var(--carbon);color:var(--limestone)}
+.btn-solid:hover{background:#2a2a2b;border-color:#2a2a2b}
+.on-dark .btn{background:transparent;color:var(--limestone);border-color:rgba(252,252,252,.4)}
+.on-dark .btn:hover{background:rgba(252,252,252,.1)}
+.on-dark .btn-solid{background:var(--limestone);color:var(--carbon);border-color:var(--limestone)}
+.on-dark .btn-solid:hover{background:var(--mist);border-color:var(--mist)}
+.link{display:inline-flex;align-items:center;gap:6px;font-weight:500;text-decoration:none;border-bottom:1.5px solid var(--greenstone);padding-bottom:3px;cursor:pointer;background:none;border-top:0;border-left:0;border-right:0;font:inherit;font-weight:500;color:inherit}
+.link:hover{color:var(--ink-2)}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:40;padding-top:env(safe-area-inset-top,0px);background:rgba(252,252,252,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:96px}
+.brand{display:block;flex:none}
+.brand img{height:60px;width:auto}
+.nav-links{display:flex;align-items:center;gap:32px;font-size:15px}
+.nav-links a:not(.btn){text-decoration:none;color:var(--carbon);transition:color .2s}
+.nav-links a:not(.btn):hover{color:var(--greystone)}
+.menu-btn{display:none;background:none;border:1px solid var(--greystone);width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;color:var(--carbon)}
+.menu-btn .ms{font-size:22px}
+@media (max-width:820px){
+  .menu-btn{display:inline-flex}
+  .nav .wrap{height:80px}
+  .nav-links{position:absolute;top:calc(80px + env(safe-area-inset-top,0px));left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--limestone);border-bottom:1px solid var(--line);padding:8px var(--gutter) 20px;display:none}
+  .nav-links.open{display:flex}
+  .nav-links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line)}
+  .nav-links .btn{margin-top:16px}
+  .brand img{height:48px}
+}
+
+/* Hero */
+.hero{padding:calc(clamp(150px,20vh,210px) + env(safe-area-inset-top,0px)) 0 0;text-align:center}
+.hero .label{color:var(--greystone)}
+.hero h1{font-family:var(--display);font-weight:900;font-size:clamp(40px,6.6vw,88px);line-height:1.02;letter-spacing:-.03em;margin:22px auto 0;max-width:14ch}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 88%, var(--greenstone) 88%, var(--greenstone) 96%, transparent 96%)}
+.hero .lede{max-width:58ch;margin:28px auto 0;color:var(--ink-2);font-size:clamp(17px,1.5vw,19px)}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.hero-stage{max-width:1120px;margin:80px auto 0;padding:0 var(--gutter)}
+@media (max-width:600px){.hero-caption{justify-content:center;text-align:center}.viewport{aspect-ratio:4/3}}
+.hero-caption{max-width:1120px;margin:0 auto;padding:16px var(--gutter) 0;display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;color:var(--greystone);font-size:13px;font-style:italic}
+
+/* Browser-style frame for live document previews */
+.frame{background:#fff;border:1px solid var(--line);overflow:hidden}
+.frame-bar{display:flex;align-items:center;gap:12px;height:42px;padding:0 14px;border-bottom:1px solid var(--line);background:var(--paper)}
+.dots{display:flex;gap:6px}
+.dots i{width:9px;height:9px;border-radius:50%;background:rgba(1,1,1,.14);display:block}
+.frame-url{flex:1;min-width:0;text-align:center;font-family:var(--mono);font-size:12px;color:var(--greystone);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frame-tag{font-family:var(--mono);font-size:12px;color:var(--carbon);white-space:nowrap}
+.viewport{position:relative;aspect-ratio:16/9;background:var(--paper);overflow:hidden}
+.viewport iframe{position:absolute;inset:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .6s;background:#fff}
+.viewport iframe.loaded{opacity:1}
+.viewport .loading{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:12px;color:var(--greystone)}
+.shield{position:absolute;inset:0;z-index:2;background:transparent;border:0;padding:0;cursor:pointer}
+.shield > span{position:absolute;right:16px;bottom:16px;display:inline-flex;align-items:center;gap:6px;font:500 14px/1 var(--sans);background:var(--carbon);color:var(--limestone);padding:11px 16px;opacity:0;transform:translateY(4px);transition:opacity .25s,transform .25s}
+.shield:hover > span,.shield:focus-visible > span{opacity:1;transform:none}
+@media (hover:none){.shield > span{opacity:1;transform:none}}
+
+/* Partners */
+.partners{padding:96px 0 24px}
+.partners .label{text-align:center;color:var(--greystone);margin:0 0 28px}
+.partner-row{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);max-width:1080px}
+.partner-row li{display:flex;align-items:center;justify-content:center;height:128px;padding:24px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.partner-row img{max-height:64px;max-width:100%;width:auto;object-fit:contain}
+@media (max-width:720px){.partner-row{grid-template-columns:repeat(2,minmax(0,1fr))}.partner-row li{height:104px;padding:18px}.partner-row img{max-height:52px}}
+
+/* Section scaffolding */
+section{position:relative}
+.section{padding:128px 0}
+.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 64px;align-items:end;margin-bottom:64px}
+.section-head .label{display:block;margin-bottom:18px;color:var(--greystone)}
+.section-head h2{font-family:var(--display);font-weight:900;font-size:clamp(36px,4.6vw,60px);line-height:1.04;letter-spacing:-.025em;margin:0}
+.section-head p{margin:0;color:var(--ink-2);font-size:18px;max-width:52ch}
+@media (max-width:860px){.section-head{grid-template-columns:1fr;margin-bottom:44px}.section{padding:96px 0}}
+
+.sub{border-top:1px solid var(--line);padding:56px 0}
+.sub:last-child{padding-bottom:0}
+.sub-index{display:flex;gap:14px;align-items:baseline;margin-bottom:36px}
+.sub-index .label:first-child{color:var(--greenstone)}
+.sub h3{font-family:var(--sans);font-weight:700;font-size:clamp(26px,2.6vw,32px);line-height:1.15;letter-spacing:-.015em;margin:0}
+
+/* Founder */
+.founder{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.portrait{margin:0}
+.portrait .ph{aspect-ratio:4/5;background:var(--paper);overflow:hidden;border:1px solid var(--line)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait figcaption{margin-top:14px;font-size:12px;font-style:italic;color:var(--greystone)}
+.founder blockquote{margin:0;font-family:var(--sans);font-weight:700;font-size:clamp(28px,3.3vw,44px);line-height:1.14;letter-spacing:-.02em}
+.founder blockquote::before{content:"";display:block;width:48px;height:3px;background:var(--greenstone);margin-bottom:28px}
+.founder .who{margin:22px 0 36px;font-size:15px}
+.founder .who strong{display:block;font-weight:700}
+.founder .who span{color:var(--greystone)}
+.founder .body p{margin:0 0 18px;color:var(--ink-2);max-width:62ch;font-size:17px}
+.founder .body p:last-of-type{margin-bottom:32px}
+@media (max-width:860px){.founder{grid-template-columns:1fr}.portrait{max-width:420px}}
+
+/* Why NLTN */
+.why{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.why .lead{font-size:clamp(20px,2vw,24px);line-height:1.45;margin:0;font-weight:500}
+.why .cols p{margin:0 0 18px;color:var(--ink-2);font-size:17px;max-width:62ch}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);margin-top:28px}
+.stat{padding:22px 20px 0 0}
+.stat + .stat{padding-left:20px;border-left:1px solid var(--line)}
+.stat b{display:block;font-family:var(--sans);font-weight:900;font-size:clamp(20px,1.7vw,24px);letter-spacing:-.015em;line-height:1.15}
+.stat span{display:block;margin-top:8px;font-size:14px;color:var(--ink-2)}
+@media (max-width:860px){.why{grid-template-columns:1fr}}
+@media (max-width:520px){.stats{grid-template-columns:1fr}.stat,.stat + .stat{padding:18px 0;border-left:0;border-bottom:1px solid var(--line)}}
+
+/* Five Ps */
+.ps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.p{padding:28px 28px 32px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;display:flex;flex-direction:column;gap:12px}
+.p .label{color:var(--greystone)}
+.p h4{font-family:var(--sans);font-weight:700;font-size:24px;margin:0;letter-spacing:-.01em}
+.p p{margin:0;color:var(--ink-2);font-size:15px}
+.p .ex{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;line-height:1.7;color:var(--carbon)}
+.p.centre{grid-row:span 2;background:var(--carbon);color:var(--limestone);justify-content:flex-start}
+.p.centre .label{color:var(--greenstone)}
+.p.centre p{color:rgba(252,252,252,.72)}
+.p.centre h4{font-family:var(--display);font-weight:900;font-size:clamp(36px,3.6vw,48px);letter-spacing:-.025em}
+.p.centre .ex{color:var(--limestone);border-color:var(--line-dark)}
+.p.centre .sq{width:56px;height:56px;border:2px solid var(--greenstone);margin:8px 0 12px}
+@media (max-width:900px){.ps{grid-template-columns:repeat(2,minmax(0,1fr))}.p.centre{grid-column:1/-1;grid-row:auto}}
+@media (max-width:560px){.ps{grid-template-columns:1fr}}
+
+/* Recognition */
+.rec{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rec li{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:20px 32px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+.rec .label{color:var(--greystone)}
+.rec h4{margin:0;font-weight:700;font-size:20px;letter-spacing:-.01em}
+.rec p{margin:4px 0 0;color:var(--ink-2);font-size:15px}
+@media (max-width:720px){.rec li{grid-template-columns:1fr;gap:8px}}
+
+/* Events (Carbon section) */
+.on-dark{background:var(--carbon);color:var(--limestone)}
+.on-dark .section-head .label{color:var(--greystone)}
+.on-dark .section-head p{color:rgba(252,252,252,.7)}
+.ev-group + .ev-group{margin-top:88px}
+.ev-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:18px;margin-bottom:32px;border-bottom:1px solid var(--line-dark)}
+.ev-head h3{margin:0;font-weight:700;font-size:clamp(22px,2.2vw,28px);letter-spacing:-.015em}
+.ev-head .label{color:var(--greystone)}
+.ev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+@media (max-width:1000px){.ev-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.ev-grid{grid-template-columns:1fr}}
+.ev-grid > *{min-width:0}
+.ev-card{display:flex;flex-direction:column;border:1px solid var(--line-dark);background:#0b0b0c;transition:border-color .2s}
+.ev-card:hover{border-color:rgba(252,252,252,.38)}
+.ev-media{position:relative;display:block;width:100%;aspect-ratio:1/1;overflow:hidden;background:#1a1a1b;border:0;padding:0;cursor:pointer}
+.ev-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.ev-card:hover .ev-media img{transform:scale(1.025)}
+.ev-media .pill{position:absolute;left:16px;top:16px;background:rgba(1,1,1,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.pill{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--greenstone);color:var(--greenstone);padding:7px 10px}
+.pill i{width:7px;height:7px;background:var(--greenstone);display:block}
+.pill.past{border-color:rgba(252,252,252,.4);color:var(--limestone)}
+.pill.past i{background:var(--greystone)}
+.ev-body{display:flex;flex-direction:column;gap:14px;padding:24px 24px 26px;flex:1}
+.ev-meta{display:flex;flex-wrap:wrap;gap:6px 16px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--greystone)}
+.ev-meta span{display:inline-flex;align-items:center;gap:6px}
+.ev-meta .ms{font-size:16px;color:var(--greenstone)}
+.ev-card h4{margin:0;font-weight:700;font-size:clamp(21px,1.9vw,24px);line-height:1.2;letter-spacing:-.015em}
+.ev-card p{margin:0;color:rgba(252,252,252,.7);font-size:15px}
+.ev-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:10px}
+.ev-actions .btn{padding:11px 16px;font-size:14px}
+.ev-soon{border:1px dashed rgba(252,252,252,.28);display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:28px;min-height:280px}
+.ev-soon .sq{width:44px;height:44px;border:2px solid var(--greenstone);margin-bottom:auto}
+.ev-soon h4{margin:0;font-weight:700;font-size:22px;letter-spacing:-.015em}
+.ev-soon p{margin:0;color:rgba(252,252,252,.66);font-size:15px}
+.ev-soon .links{display:flex;gap:18px;flex-wrap:wrap}
+.ev-soon a{color:var(--limestone);text-decoration:none;font-weight:500;font-size:15px;border-bottom:1.5px solid var(--greenstone);padding-bottom:2px}
+
+/* Resources */
+.res-tools{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;margin:0 0 20px}
+.res-tools > *{min-width:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0}
+.search{position:relative;flex:0 1 340px;display:flex;align-items:center}
+.search > .ms{position:absolute;left:14px;color:var(--greystone);font-size:20px;pointer-events:none}
+.search input{width:100%;font:400 15px/1 var(--sans);color:var(--carbon);background:#fff;border:1px solid var(--greystone);border-radius:0;padding:13px 44px 13px 44px;-webkit-appearance:none;appearance:none;transition:border-color .2s}
+.search input::placeholder{color:var(--greystone)}
+.search input:hover{background:#fff;border-color:var(--carbon)}
+.search input:focus{outline:none;border-color:var(--carbon);box-shadow:0 0 0 1px var(--carbon)}
+.search input::-webkit-search-cancel-button,.search input::-webkit-search-decoration{-webkit-appearance:none;appearance:none}
+.search-clear{position:absolute;right:6px;width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;background:none;border:0;cursor:pointer;color:var(--carbon)}
+.search-clear:hover{background:var(--mist)}
+.search-clear[hidden]{display:none}
+@media (max-width:860px){.res-tools{flex-direction:column-reverse;align-items:stretch}.search{flex:1 1 auto}}
+mark.hl{background:none;color:inherit;text-decoration:underline;text-decoration-color:var(--greenstone);text-decoration-thickness:2px;text-underline-offset:3px}
+.no-results{border:1px dashed var(--greystone);padding:40px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.no-results[hidden]{display:none}
+.no-results p{margin:0;color:var(--ink-2)}
+.no-results .nr-title{font-weight:700;font-size:20px;color:var(--carbon);overflow-wrap:anywhere}
+.no-results .btn{margin-top:10px}
+.filters button{display:inline-flex;align-items:center;gap:6px;font:500 14px/1 var(--sans);border:1px solid var(--greystone);background:#fff;color:var(--carbon);padding:11px 16px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.filters button:hover{background:var(--mist)}
+.filters button[aria-pressed="true"]{background:var(--carbon);border-color:var(--carbon);color:var(--limestone)}
+.filters .count{font-family:var(--mono);font-size:12px;opacity:.6}
+.filter-status{margin:0 0 40px;font-size:14px;color:var(--greystone)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px 40px}
+@media (max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.grid{grid-template-columns:1fr;gap:44px}}
+.card{display:flex;flex-direction:column;text-align:left;background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer}
+.card[hidden]{display:none}
+.card.in{animation:cardIn .35s ease both}
+@keyframes cardIn{from{opacity:.0001;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cover{position:relative;aspect-ratio:16/10;overflow:hidden;border:1px solid var(--line);transition:transform .35s ease}
+.card:hover .cover{transform:translateY(-3px)}
+.cover svg.pat{position:absolute;inset:0;width:100%;height:100%}
+.cover .c-top,.cover .c-bot{position:absolute;left:20px;right:20px;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+.cover .c-top{top:18px}
+.cover .c-bot{bottom:18px}
+.cover .c-open{display:inline-flex;align-items:center;gap:6px;opacity:0;transform:translateY(4px);transition:opacity .25s,transform .25s}
+.card:hover .c-open,.card:focus-visible .c-open{opacity:1;transform:none}
+@media (hover:none){.cover .c-open{opacity:1;transform:none}}
+.cover img.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover.has-photo .c-top,.cover.has-photo .c-bot{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.cover.has-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(1,1,1,.35),transparent 35%,transparent 65%,rgba(1,1,1,.45))}
+.cover.has-photo .c-top,.cover.has-photo .c-bot{z-index:1}
+.t-report{background:var(--carbon);color:var(--limestone)}
+.t-guide{background:var(--paper);color:var(--carbon)}
+.t-article{background:#fff;color:var(--carbon)}
+.t-news{background:var(--mist);color:var(--carbon)}
+.t-event{background:var(--carbon);color:var(--limestone)}
+.card .meta{margin:22px 0 10px;display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.card .meta .tag{color:var(--greenstone)}
+.card .meta .sep{width:3px;height:3px;background:var(--greystone);border-radius:50%}
+.card .meta time{color:var(--greystone)}
+.card .ct{display:block;margin:0 0 10px;font-weight:700;font-size:22px;line-height:1.22;letter-spacing:-.015em}
+.card:hover .ct{text-decoration:underline;text-decoration-color:var(--greenstone);text-decoration-thickness:1.5px;text-underline-offset:4px}
+.card .cs{display:block;margin:0;color:var(--ink-2);font-size:15.5px;max-width:48ch}
+.more{display:flex;justify-content:center;margin-top:64px}
+.more[hidden]{display:none}
+
+/* Join + footer */
+.join{padding:128px 0 0}
+.join h2{font-family:var(--display);font-weight:900;font-size:clamp(40px,6.4vw,84px);line-height:1;letter-spacing:-.03em;margin:0;max-width:15ch}
+.join .row{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:end}
+.join p{margin:0 0 28px;color:rgba(252,252,252,.72);font-size:18px;max-width:46ch}
+.socials{display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){.join .row{grid-template-columns:1fr}}
+.foot{margin-top:120px;padding:40px 0 calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.foot img{height:64px;width:auto}
+@media (max-width:600px){.foot img{height:52px}}
+.foot nav{display:flex;gap:24px;flex-wrap:wrap;font-size:14px}
+.foot nav a{text-decoration:none;color:rgba(252,252,252,.7)}
+.foot nav a:hover{color:var(--limestone)}
+.legal{width:100%;display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line-dark)}
+.legal small{color:var(--greystone);font-size:13px;min-width:0}
+.legal-links{display:flex;gap:8px 20px;flex-wrap:wrap;min-width:0}
+.legal-links button,.legal-links a{background:none;border:0;padding:0;font:400 13px/1.6 var(--sans);color:rgba(252,252,252,.7);cursor:pointer;text-decoration:none;overflow-wrap:anywhere}
+.legal-links button:hover,.legal-links a:hover{color:var(--limestone);text-decoration:underline;text-decoration-color:var(--greenstone);text-underline-offset:3px}
+.email{display:inline-flex;align-items:center;gap:10px;margin-top:24px;font-size:clamp(17px,1.8vw,20px);text-decoration:none;color:var(--limestone);border-bottom:1.5px solid var(--greenstone);padding-bottom:4px;max-width:100%;overflow-wrap:anywhere}
+.email .ms{color:var(--greenstone);font-size:22px}
+/* Guard every grid/flex child against forcing horizontal overflow */
+.section-head > *,.founder > *,.why > *,.feature > *,.past-card > *,.join .row > *,.grid > *,.ps > *,.rec li > *{min-width:0}
+.modal-body iframe.policy{background:var(--limestone)}
+
+/* Modal: every document opens on the site */
+.modal{position:fixed;inset:0;z-index:60;display:none;background:rgba(1,1,1,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(20px + env(safe-area-inset-bottom,0px))}
+.modal.open{display:flex;flex-direction:column}
+.modal-inner{flex:1;min-height:0;display:flex;flex-direction:column;max-width:1200px;width:100%;margin:0 auto;background:var(--limestone);border:1px solid var(--line)}
+.modal-bar{display:flex;align-items:center;gap:16px;padding:12px 12px 12px 20px;border-bottom:1px solid var(--line)}
+.modal-bar .label{color:var(--greenstone);white-space:nowrap}
+.modal-title{flex:1;min-width:0;font-weight:700;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.modal-close{display:inline-flex;align-items:center;gap:6px;font:500 14px/1 var(--sans);border:1px solid var(--greystone);background:#fff;padding:10px 14px;cursor:pointer;color:var(--carbon)}
+.modal-close:hover{background:var(--mist)}
+.modal-body{flex:1;min-height:0;position:relative;background:#fff}
+.modal-body iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.modal-body .loading{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:12px;color:var(--greystone)}
+.post{position:absolute;inset:0;overflow:auto;padding:clamp(24px,4vw,56px)}
+.post-inner{max-width:760px;margin:0 auto}
+.post img{width:100%;height:auto;border:1px solid var(--line);margin-bottom:32px}
+.post h2{font-family:var(--display);font-weight:900;font-size:clamp(28px,3.4vw,40px);line-height:1.08;letter-spacing:-.02em;margin:0 0 18px}
+.post p{color:var(--ink-2);font-size:17px;margin:0 0 16px}
+.post dl{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;margin:28px 0;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.post dt{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--greystone);padding-top:3px}
+.post dd{margin:0}
+.post .pq{margin:24px 0;padding-left:20px;border-left:3px solid var(--greenstone);font-size:clamp(18px,2vw,21px);line-height:1.45;font-weight:500;color:var(--carbon)}
+@media (max-width:600px){
+  .modal{padding:calc(8px + env(safe-area-inset-top,0px)) 8px calc(8px + env(safe-area-inset-bottom,0px))}
+  .modal-bar{padding:10px 10px 10px 14px;gap:10px}
+  .modal-bar .label{display:none}
+  .modal-close .txt{display:none}
+}
+
+
+/* Resource cards: original 16:10 covers, with the live document preview filling the cover */
+.card{display:flex;flex-direction:column;min-width:0}
+.cover iframe{position:absolute;inset:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .6s;background:#fff}
+.cover iframe.loaded{opacity:1}
+.cover .loading{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:11px;color:var(--greystone)}
+.t-report .loading,.t-event .loading{color:rgba(252,252,252,.6)}
+.cover svg.pat{transition:opacity .5s}
+.cover.showing svg.pat{opacity:0}
+.cover .c-top{z-index:1;pointer-events:none}
+.cover.showing .c-top{left:12px;right:12px;top:12px}
+.cover.showing .c-top span{background:rgba(1,1,1,.82);color:var(--limestone);padding:5px 8px}
+.cover .shield > span{right:14px;bottom:14px;padding:9px 13px;font-size:13px}
+.card-text{display:block;width:100%;text-align:left;background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer}
+
+/* Rich write-ups in the modal */
+.post .hero-img{width:100%;height:auto;border:1px solid var(--line);margin:0 0 32px;display:block}
+.post .hero-img.poster{max-width:520px;margin:0 auto 36px}
+.post .lead{font-size:clamp(18px,1.8vw,20px);color:var(--carbon);font-weight:500;line-height:1.5}
+.post h3{font-weight:700;font-size:20px;letter-spacing:-.01em;margin:36px 0 14px}
+.post ol.reasons{list-style:none;margin:0 0 8px;padding:0;counter-reset:r}
+.post ol.reasons li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding:18px 0;border-top:1px solid var(--line)}
+.post ol.reasons li:last-child{border-bottom:1px solid var(--line)}
+.post ol.reasons li::before{counter-increment:r;content:"0" counter(r);font-family:var(--mono);font-size:13px;color:var(--greenstone);padding-top:3px}
+.post ol.reasons b{display:block;margin-bottom:4px}
+.post ol.reasons span{color:var(--ink-2);font-size:16px}
+.post .cta{display:flex;gap:12px;flex-wrap:wrap;margin:32px 0 8px;padding:24px;background:var(--paper);border:1px solid var(--line);align-items:center;justify-content:space-between}
+.post .cta p{margin:0;color:var(--carbon);font-weight:500}
+.post .tags{font-family:var(--mono);font-size:12px;color:var(--greystone);letter-spacing:.04em;margin-top:28px}
+
+/* Cookie consent */
+.consent{position:fixed;z-index:70;left:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:min(440px,calc(100% - 40px));background:var(--limestone);color:var(--carbon);border:1px solid var(--carbon);box-shadow:0 18px 50px rgba(1,1,1,.18);padding:24px}
+.consent[hidden]{display:none}
+.consent .label{color:var(--greenstone);display:block;margin-bottom:10px}
+.consent h2{margin:0 0 10px;font-weight:700;font-size:20px;letter-spacing:-.01em}
+.consent p{margin:0 0 20px;font-size:14.5px;color:var(--ink-2)}
+.consent .row{display:flex;gap:8px;flex-wrap:wrap}
+.consent .btn{padding:11px 16px;font-size:14px;flex:1 1 auto}
+.consent .read{display:inline-flex;margin-top:14px;font-size:14px}
+@media (max-width:480px){.consent{left:10px;right:10px;width:auto;bottom:calc(10px + env(safe-area-inset-bottom,0px));padding:20px}}
+
+/* Click-to-load panel for the hero when previews are off */
+.consent-gate{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;background:var(--paper)}
+.consent-gate p{margin:0;max-width:44ch;color:var(--ink-2);font-size:15px}
+
+@media (min-width:1600px){:root{--max:1440px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Nigerian LegalTech Network, home">
+      <img src="https://i.ibb.co/7dBY6cyy/NLTN-brand-signature-light-background.png" alt="Nigerian LegalTech Network">
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><span class="ms" aria-hidden="true">menu</span></button>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#about">About us</a>
+      <a href="#events">Events</a>
+      <a href="#resources">Resources</a>
+      <a href="#partners">Partners</a>
+      <a href="#join" class="btn">Join the network</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="label">Nigerian LegalTech Network</span>
+      <h1>The centre of Nigeria's <em>legal tech</em> ecosystem.</h1>
+      <p class="lede">A not-for-profit network bringing together the lawyers, students, founders, regulators and researchers shaping how technology serves law and justice in Nigeria.</p>
+      <div class="hero-actions">
+        <a href="#resources" class="btn btn-solid">Explore resources <span class="ms" aria-hidden="true">arrow_forward</span></a>
+        <a href="#events" class="btn">Upcoming events</a>
+      </div>
+    </div>
+    <div class="hero-stage" id="heroStage"></div>
+    <div class="hero-caption"><span>Latest report: How OpenAI, Anthropic and Microsoft are reshaping legal practice</span><span>Click to read it in full</span></div>
+  </section>
+
+  <!-- Partner organisations -->
+  <section class="partners" id="partners">
+    <div class="wrap">
+      <p class="label">Partner organisations</p>
+      <ul class="partner-row">
+        <li><img src="https://i.ibb.co/HT2nxV9r/image-6.jpg" alt="Partner organisation logo" loading="lazy"></li>
+        <li><img src="https://i.ibb.co/6RVttp1g/Unknown-6.png" alt="LegalTechTalk" loading="lazy"></li>
+        <li><img src="https://i.ibb.co/nqRkPfyP/Unknown-4.png" alt="Partner organisation logo" loading="lazy"></li>
+        <li><img src="https://i.ibb.co/Qjr3zqby/Unknown-5.png" alt="Partner organisation logo" loading="lazy"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About us -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="label">About us</span>
+          <h2>Built so Nigerian lawyers are part of the conversation.</h2>
+        </div>
+        <p>NLTN connects the people, institutions and ideas that define Nigeria's legal technology ecosystem, and helps the profession meet the pace of change with confidence.</p>
+      </div>
+
+      <!-- 01 Founder's Desk -->
+      <div class="sub" id="founder">
+        <div class="sub-index"><span class="label">01</span><span class="label">From the Founder's Desk</span></div>
+        <div class="founder">
+          <figure class="portrait">
+            <div class="ph"><img src="https://i.ibb.co/N6nmnxXg/Chioma-Wilson-Dike-3.jpg" alt="Chioma Wilson-Dike, Founder of the Nigerian LegalTech Network" loading="lazy"></div>
+            <figcaption>Chioma Wilson-Dike, Founder, Nigerian LegalTech Network</figcaption>
+          </figure>
+          <div>
+            <blockquote>Technology is not the biggest threat facing lawyers. Complacency is.</blockquote>
+            <p class="who"><strong>Chioma Wilson-Dike</strong><span>Founder, NLTN and Lexlytic</span></p>
+            <div class="body">
+              <p>Chioma built her career across private legal practice, compliance and international regulatory environments. There she watched legal work become data-driven, automated and monitored in real time. Back home, many lawyers and law students weren't part of those conversations, because they lacked access, exposure and community. Ability was never the gap.</p>
+              <p>NLTN was founded to close that gap: one platform where lawyers, technologists, innovators, academics, regulators and students prepare together for the future of legal services, treating legal tech as a professional necessity rather than a niche interest.</p>
+              <button class="btn btn-solid" type="button" data-open="1Gztqt-cZgHedTrNJ4RPCjxHue9K03i2M">Read the full interview <span class="ms" aria-hidden="true">arrow_forward</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 Mission -->
+      <div class="sub">
+        <div class="sub-index"><span class="label">02</span><span class="label">Our mission</span></div>
+        <div class="why">
+          <div>
+            <h3>From consumer to creator of legal technology.</h3>
+          </div>
+          <div class="cols">
+            <p class="lead">We want legal tech to become a normal part of legal education, legal practice and legal policy across Nigeria, and ultimately across Africa.</p>
+            <p style="margin-top:20px">That means law students graduating with real exposure to emerging technology. It means lawyers in every part of the country, not only the major commercial centres, having access to modern tools. And it means firms, courts and regulators adopting innovation responsibly.</p>
+            <p>Africa faces its own legal, regulatory and access-to-justice challenges. We don't assume every solution has to come from elsewhere. NLTN exists to help build a generation of lawyers, founders, researchers and policymakers who create solutions for African legal systems and take them to the world.</p>
+            <div class="stats">
+              <div class="stat"><b>Education</b><span>Articles, reports and guides for practitioners and students</span></div>
+              <div class="stat"><b>Community</b><span>Events, challenges and conversations across the ecosystem</span></div>
+              <div class="stat"><b>Connection</b><span>Partnerships linking Nigeria to global legal innovation</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 Five Ps -->
+      <div class="sub">
+        <div class="sub-index"><span class="label">03</span><span class="label">The Five Ps</span></div>
+        <div class="why" style="margin-bottom:40px">
+          <div><h3>Who the network connects.</h3></div>
+          <div class="cols"><p>Our identity, the Nexus, is built on five groups. Four cornerstones define the ecosystem. The centre, People, gives it purpose.</p></div>
+        </div>
+        <div class="ps">
+          <div class="p centre">
+            <span class="label">The Centre</span>
+            <div class="sq" aria-hidden="true"></div>
+            <h4>People</h4>
+            <p>The individuals at the heart of the legal technology ecosystem. Every platform, policy, practice and research initiative ultimately exists to serve people.</p>
+          </div>
+          <div class="p">
+            <span class="label">Cornerstone</span>
+            <h4>Platforms</h4>
+            <p>Technology enabling legal services through software, AI, digital infrastructure and legal information systems.</p>
+          </div>
+          <div class="p">
+            <span class="label">Cornerstone</span>
+            <h4>Practice</h4>
+            <p>The organisations and professionals applying legal technology in the delivery of legal services and the advancement of access to justice.</p>
+          </div>
+          <div class="p">
+            <span class="label">Cornerstone</span>
+            <h4>Policy</h4>
+            <p>Institutions responsible for governing, regulating and shaping the legal profession and the use of legal technology.</p>
+          </div>
+          <div class="p">
+            <span class="label">Cornerstone</span>
+            <h4>Pioneers</h4>
+            <p>Research institutions and independent experts advancing legal innovation through scholarship, evidence and experimentation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 Recognition -->
+      <div class="sub">
+        <div class="sub-index"><span class="label">04</span><span class="label">Recognition and milestones</span></div>
+        <ul class="rec">
+          <li>
+            <span class="label">Oct 2026</span>
+            <div><h4>Fireside chat at Legal Geek, London</h4><p>Our founder led a session on what winning legal AI adoption in emerging markets takes.</p></div>
+            <button class="link" type="button" data-open="legal-geek">Read more <span class="ms" aria-hidden="true">arrow_forward</span></button>
+          </li>
+          <li>
+            <span class="label">2026</span>
+            <div><h4>ILTA Influential Women in Legal Tech</h4><p>Chioma Wilson-Dike featured in the 2026 ILTA Awards of Excellence publication.</p></div>
+            <button class="link" type="button" data-open="1IIUd325mSl81F0UfkqCNjAGP438bqUt-">Read more <span class="ms" aria-hidden="true">arrow_forward</span></button>
+          </li>
+          <li>
+            <span class="label">May 2026</span>
+            <div><h4>NLTN x SpotDraft fireside session</h4><p>A global virtual conversation on AI, legal operations and the future of in-house legal careers.</p></div>
+            <button class="link" type="button" data-open="spotdraft">Read more <span class="ms" aria-hidden="true">arrow_forward</span></button>
+          </li>
+          <li>
+            <span class="label">2026</span>
+            <div><h4>Industry Partner, LegalTechTalk</h4><p>Bringing Nigeria and the wider African market into one of the world's leading legal innovation conferences.</p></div>
+            <button class="link" type="button" data-open="1ZW_oWNG6CKm1pNHw5pmSsZWaI8X1WCUR">Read more <span class="ms" aria-hidden="true">arrow_forward</span></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="section on-dark" id="events">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="label">Events</span>
+          <h2>Events</h2>
+        </div>
+        <p>Flagship events hosted in Nigeria, plus sessions with the global legal innovation community.</p>
+      </div>
+      <div class="ev-group">
+        <div class="ev-head"><h3>Upcoming</h3><span class="label" id="upCount"></span></div>
+        <div class="ev-grid" id="upcoming"></div>
+      </div>
+      <div class="ev-group">
+        <div class="ev-head"><h3>Past events</h3><span class="label" id="pastCount"></span></div>
+        <div class="ev-grid" id="past"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section class="section" id="resources">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="label">Resources</span>
+          <h2>Research, guides and analysis</h2>
+        </div>
+        <p>Practical, evidence-based perspectives on legal technology and AI for Nigerian practitioners, students and policymakers.</p>
+      </div>
+      <div class="res-tools">
+        <div class="filters" role="group" aria-label="Filter resources" id="filters"></div>
+        <div class="search">
+          <span class="ms" aria-hidden="true">search</span>
+          <input type="search" id="resSearch" placeholder="Search resources" autocomplete="off" spellcheck="false" aria-label="Search resources">
+          <button type="button" class="search-clear" id="resClear" aria-label="Clear search" hidden><span class="ms" aria-hidden="true">close</span></button>
+        </div>
+      </div>
+      <p class="filter-status" id="filterStatus" aria-live="polite"></p>
+      <div class="no-results" id="noResults" hidden>
+        <p class="nr-title" id="noResultsText"></p>
+        <p>Try a different word, or clear the search and filter.</p>
+        <button class="btn" type="button" id="noResultsClear">Clear search</button>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="more"><button class="btn" type="button" id="moreBtn">Show more</button></div>
+    </div>
+  </section>
+
+  <!-- Join + footer -->
+  <section class="on-dark join" id="join">
+    <div class="wrap">
+      <div class="row">
+        <h2>Be part of the network.</h2>
+        <div>
+          <p>Follow NLTN for new resources, event announcements and conversations from across Nigeria's legal tech ecosystem.</p>
+          <div class="socials">
+            <a class="btn btn-solid" href="https://www.linkedin.com/company/nigerianlegaltechnetwork/" target="_blank" rel="noopener">LinkedIn <span class="ms" aria-hidden="true">arrow_outward</span></a>
+            <a class="btn" href="https://www.instagram.com/nigerianlegaltechnetwork/" target="_blank" rel="noopener">Instagram <span class="ms" aria-hidden="true">arrow_outward</span></a>
+          </div>
+          <a class="email" href="mailto:hello@nigerianlegaltech.com"><span class="ms" aria-hidden="true">mail</span>hello@nigerianlegaltech.com</a>
+        </div>
+      </div>
+      <footer class="foot">
+        <img src="https://i.ibb.co/1YsnWcL4/NLTN-brand-signature-dark-background.png" alt="Nigerian LegalTech Network" loading="lazy">
+        <nav aria-label="Footer">
+          <a href="#about">About us</a>
+          <a href="#events">Events</a>
+          <a href="#resources">Resources</a>
+          <a href="#partners">Partners</a>
+        </nav>
+        <div class="legal">
+          <small>© <span id="yr">2026</span> Nigerian LegalTech Network. The centre of Nigeria's legal tech ecosystem.</small>
+          <div class="legal-links">
+            <button type="button" data-open="privacy">Privacy policy</button>
+            <button type="button" data-open="terms">Terms of use</button>
+            <button type="button" data-open="cookies">Cookie policy</button>
+            <button type="button" id="cookieSettings">Cookie settings</button>
+            <a href="mailto:hello@nigerianlegaltech.com">hello@nigerianlegaltech.com</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<aside class="consent" id="consent" role="dialog" aria-modal="false" aria-labelledby="consentTitle" hidden>
+  <span class="label">Cookies</span>
+  <h2 id="consentTitle">Your choice on cookies</h2>
+  <p>We don't use our own tracking, analytics or advertising cookies. The documents, previews and registration forms on this site are shown using Google services, which may set their own cookies. Choose an option below, or read the full policy.</p>
+  <div class="row">
+    <button class="btn btn-solid" type="button" id="cAccept">Accept all</button>
+    <button class="btn" type="button" id="cDecline">Decline all</button>
+  </div>
+  <button class="link read" type="button" id="cRead">Read the full cookie policy</button>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-inner">
+    <div class="modal-bar">
+      <span class="label" id="modalTag"></span>
+      <div class="modal-title" id="modalTitle"></div>
+      <button type="button" class="modal-close" id="modalCopy"><span class="ms" aria-hidden="true">link</span><span class="txt">Copy link</span></button>
+      <button type="button" class="modal-close" id="modalClose"><span class="txt">Close</span><span class="ms" aria-hidden="true">close</span></button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+/* LTIC 2.0 poster, embedded so the site is a single file */
+const LTIC_IMG = "data:image/webp;base64,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";
+/* =========================================================
+   EVENTS
+   Add an event by adding an object. status: "upcoming" | "past".
+   image: any image URL (or a file in /assets). register: optional form URL
+   (Google Forms: end the link with viewform?embedded=true so it opens on the site).
+   ========================================================= */
+const REG_LTIC = "https://docs.google.com/forms/d/e/1FAIpQLSdGNGMDYW4WeDbPhTX_Vlnb3sF0XtQkwrOYr9YjoEZjndaBwQ/viewform?embedded=true";
+const EVENTS = [
+  {id:"ltic", status:"upcoming", badge:"Registration open", title:"Legal Tech Innovation Challenge (LTIC) 2.0",
+   location:"Lagos, Nigeria", when:"Date to be announced", image:LTIC_IMG, imgPos:"center 45%",
+   summary:"Our innovation challenge returns, bigger and in person. Build real solutions to legal and regulatory problems, and compete for cash prizes.",
+   register:REG_LTIC},
+  {id:"legal-geek", status:"past", badge:"Fireside chat", title:"Legal AI adoption looks different in Lagos than in London",
+   location:"Legal Geek, London", when:"15 Oct 2026", image:"https://i.ibb.co/C5mtFHSJ/IMG-3193.jpg",
+   summary:"Chioma Wilson-Dike with Funmilayo Otsemobor of Aluko & Oyebode and Vaishali Gopal of Future Relics."},
+  {id:"spotdraft", status:"past", badge:"Fireside session", title:"NLTN x SpotDraft: Is being a good lawyer enough?",
+   location:"Virtual", when:"May 2026", image:"https://i.ibb.co/FL2YCrkQ/1779779819718.jpg",
+   summary:"Akshay Verma on what the next generation of in-house lawyers must learn to stay competitive."}
+];
+
+/* Full write-ups, opened in the on-site viewer */
+const POSTS = {
+  "ltic": `
+    <img class="hero-img poster" src="${LTIC_IMG}" alt="Legal Tech Innovation Challenge 2.0 poster: LTIC 2.0, Lagos, coming soon">
+    <span class="label" style="color:var(--greenstone)">Upcoming event · Lagos, Nigeria</span>
+    <h2 style="margin-top:14px">Legal Tech Innovation Challenge (LTIC) 2.0</h2>
+    <p class="lead">Calling all young innovators, legal professionals and law students. The Legal Tech Innovation Challenge is back, bigger and bolder, and this time it is coming physically to Lagos State, Nigeria.</p>
+    <p>For law students in accredited Nigerian universities, and young and experienced professionals who want to solve problems in the legal tech sector, this is your chance to move beyond theory and build real-world solutions that will shape the future of law and justice delivery in Nigeria.</p>
+    <dl>
+      <dt>Location</dt><dd>Lagos, Nigeria</dd>
+      <dt>Date</dt><dd>To be announced</dd>
+      <dt>Open to</dt><dd>Law students in accredited Nigerian universities, and young and experienced professionals</dd>
+      <dt>Format</dt><dd>In person. Solutions built with code or low-code tools</dd>
+    </dl>
+    <h3>Why you should register</h3>
+    <ol class="reasons">
+      <li><div><b>Solve real problems</b><span>Tackle real-world legal and regulatory challenges with functional, scalable technological innovations, built in code or with low-code tools.</span></div></li>
+      <li><div><b>Create, collaborate, innovate</b><span>Connect with like-minded students, legal tech founders and industry experts who can help turn your idea into reality.</span></div></li>
+      <li><div><b>Cash prizes</b><span>Top innovators walk away with cash prizes to support their ideas and take them to the next level.</span></div></li>
+    </ol>
+    <div class="cta"><p>Ready to build the future of law?</p><button class="btn btn-solid" type="button" data-open="ltic-register">Register now <span class="ms" aria-hidden="true">arrow_forward</span></button></div>
+    <p class="tags">#LTIC2 #LegalTech #LegalAI #NLTN</p>`,
+  "legal-geek": `
+    <img class="hero-img" src="https://i.ibb.co/C5mtFHSJ/IMG-3193.jpg" alt="NLTN at Legal Geek, London">
+    <span class="label" style="color:var(--greenstone)">Past event · Legal Geek, London</span>
+    <h2 style="margin-top:14px">Legal AI adoption looks different in Lagos than in London</h2>
+    <p class="lead">Our founder led a fireside chat at Legal Geek on what winning adoption in emerging markets takes.</p>
+    <p>Chioma Wilson-Dike was joined by Funmilayo Otsemobor, Partner at Aluko &amp; Oyebode, and Vaishali Gopal of Future Relics.</p>
+    <dl>
+      <dt>Date</dt><dd>Thursday 15 October 2026</dd>
+      <dt>Time</dt><dd>12:45 to 13:00 London time (the same as Lagos)</dd>
+      <dt>Stage</dt><dd>Disco Stage, Legal Geek</dd>
+    </dl>
+    <p>Follow NLTN on LinkedIn for our next conversations with the global legal innovation community.</p>
+    <p class="tags">#NLTN #LegalTechAfrica</p>`,
+  "spotdraft": `
+    <img class="hero-img" src="https://i.ibb.co/FL2YCrkQ/1779779819718.jpg" alt="NLTN x SpotDraft fireside session">
+    <span class="label" style="color:var(--greenstone)">Past event · Virtual · With SpotDraft</span>
+    <h2 style="margin-top:14px">Is being a good lawyer enough? What the next generation of in-house lawyers must learn to stay competitive</h2>
+    <p class="lead">What started as a small virtual session quickly grew into a genuinely engaging global conversation on AI, legal operations, legal innovation and the evolving future of legal careers.</p>
+    <p>Thank you to Akshay Verma for an honest, thoughtful and practical discussion. Attendees most appreciated that the conversation moved beyond the usual fear-driven narratives around AI and focused on what lawyers can practically do to remain valuable, adaptable and future-ready.</p>
+    <dl>
+      <dt>Speaker</dt><dd>Akshay Verma</dd>
+      <dt>Moderator</dt><dd>Chiderah Azodoh</dd>
+      <dt>Partner</dt><dd>SpotDraft</dd>
+      <dt>Format</dt><dd>Virtual fireside session</dd>
+    </dl>
+    <blockquote class="pq">“It was refreshing to hear a realistic, practical conversation instead of the usual noise and scare tactics.”</blockquote>
+    <blockquote class="pq">“As a person at the grassroots, I felt seen and understood.”</blockquote>
+    <p>Thank you to the SpotDraft team for the collaboration and support behind the scenes, and to every attendee who joined from different jurisdictions, organisations and stages of their careers.</p>
+    <p>The engagement reinforced something we strongly believe at NLTN: the future of legal work cannot be shaped through silence, fear or isolation. It has to be shaped through conversations, collaboration, experimentation and community. And this is only the beginning.</p>
+    <p class="tags">#LegalTech #LegalInnovation #LegalOps #AI #FutureOfLaw #NLTN #SpotDraft</p>`
+};
+
+/* =========================================================
+   RESOURCES
+   Each Drive file shows its first page as the card image and opens on the site.
+   To add one: share the file as "Anyone with the link can view", copy the ID from
+   drive.google.com/file/d/<ID>/view and add a row. tag: report | article | guide | news | event
+   keywords: hidden search terms (laws, organisations, people, topics the document covers)
+   ========================================================= */
+const RESOURCES = [
+  {id:"1_o_D76qzSWohug6f-0XiKuE6fnApRhF7", tag:"article", date:"2026-10-19", title:"Contract Automation for Nigerian SMEs", summary:"Why automated drafting tools struggle where customary law shapes commercial relationships.", keywords:"contract automation, CLM, contract lifecycle management, SMEs, small business, customary law, drafting tools, templates, clause libraries, e-signatures, informal trade, land, family businesses"},
+  {id:"legal-geek", kind:"post", tag:"event", date:"2026-10-15", day:true, photo:"https://i.ibb.co/C5mtFHSJ/IMG-3193.jpg", title:"Fireside Chat at Legal Geek: Winning Legal AI Adoption in Emerging Markets", summary:"Our founder on the Disco Stage in London with Aluko & Oyebode and Future Relics.", keywords:"Legal Geek, London, fireside chat, emerging markets, adoption, legal AI, Aluko & Oyebode, Funmilayo Otsemobor, Vaishali Gopal, Future Relics, Chioma Wilson-Dike, Lagos"},
+  {id:"ltic", kind:"post", tag:"event", date:"2026-09-22", photo:LTIC_IMG, title:"Legal Tech Innovation Challenge (LTIC) 2.0", summary:"Our innovation challenge returns, in person in Lagos. Registration is open.", keywords:"LTIC, LITC, hackathon, innovation challenge, Lagos, law students, prizes, registration, competition, low-code, code"},
+  {id:"1fEcIsSQm3REu5EQ7oma0R9E20o4VYSDt", tag:"article", date:"2026-09-22", title:"The Risk Behind AI-Generated Trademarks", summary:"Registrability and ownership problems under the Trademarks Act for brands made with generative AI.", keywords:"trademarks, Trademarks Act, AI-generated logos, branding, brand names, Midjourney, ChatGPT, Canva, registrability, ownership, intellectual property, IP"},
+  {id:"1nP1RJGhyMJenvdiIP2iQSHYOOBrLaZkE", tag:"article", date:"2026-09-22", title:"How AI Is Rewriting Nigerian IP Law", summary:"Authorship under the Copyright Act 2022, the DABUS precedent and the gap left for AI-generated works.", keywords:"intellectual property, IP, copyright, Copyright Act 2022, authorship, patents, Patents and Designs Act, DABUS, AI-generated works"},
+  {id:"1SVYZfyZiKVIAv1VU86lYdE4HgHb8SzWR", tag:"article", date:"2026-09-22", title:"Legal AI Sovereignty and Its Implications for Nigeria", summary:"Why Latham & Watkins built its own AI infrastructure, and what a Nigerian path to sovereignty could look like.", keywords:"sovereignty, data sovereignty, Latham & Watkins, GPU, Nvidia, infrastructure, SaaS, cost, local talent, capital, Big Law"},
+  {id:"1OuzNEwKwXekfFGGXcZkWasasLAFpSJnH", tag:"article", date:"2026-09-22", title:"Legal AI and Data Exfiltration", summary:"Why leaks of client data from AI sessions are a real risk, using a 2026 vulnerability disclosure as a case study.", keywords:"data exfiltration, security, cybersecurity, confidentiality, client data, Claude, Anthropic, Claudy Day, Oasis Security, prompt injection, vulnerability, leaks"},
+  {id:"13fuLUVG5PQS5z0uujDFI-LcYMTgyMpqa", tag:"report", date:"2026-09-04", title:"How OpenAI, Anthropic and Microsoft Are Reshaping Legal Practice", summary:"What the 2026 launches of dedicated legal AI suites mean for how Nigerian lawyers research, draft and compete.", keywords:"OpenAI, Anthropic, Microsoft, Claude for Legal, Codex, Copilot, legal AI tools, plugins, legal research, drafting, competition, big tech"},
+  {id:"1Gztqt-cZgHedTrNJ4RPCjxHue9K03i2M", tag:"article", date:"2026-09-04", title:"From the Founder's Desk: Why We Founded NLTN", summary:"Chioma Wilson-Dike on the skills gap, the lawyer of the future and building NLTN against the odds.", keywords:"Chioma Wilson-Dike, founder, interview, origin story, skills gap, legal education, lawyer of the future, complacency, Africa, NLTN"},
+  {id:"1jh7TpUuWVglXj-g3aPWMokCRqyqzJcBv", tag:"report", date:"2026-09-04", title:"The Price of a Breach: Cyber Security and the Protection of Justice", summary:"Ransom payouts at global firms, and what reputational, regulatory and client fallout means for Nigerian practices.", keywords:"cyber security, cybersecurity, ransomware, data breach, Weil Gotshal, Silent Ransom Group, Luna Moth, extortion, regulatory fines, reputation, clients"},
+  {id:"1j76ZooqgIdQ0MOOgG4bIr4IwsppRvC0Y", tag:"report", date:"2026-09-04", title:"Navigating Nigeria's 2026 Regulatory Landscape", summary:"Data protection enforcement, new CBN directives and the RegTech tools lawyers need to advise on them.", keywords:"regulation, regulatory, data protection, NDPA, NDPC, CBN, Central Bank of Nigeria, fintech, compliance, RegTech, GAID, banks"},
+  {id:"1X8VPpr1K70huL4b-ehX9Hi4b0NUqxWl4", tag:"report", date:"2026-09-04", title:"The Rising Cost of Legal AI", summary:"How consumption-based pricing is widening the gap between well-resourced firms and most Nigerian practitioners.", keywords:"cost, pricing, subscriptions, consumption-based pricing, vendors, access, affordability, small firms, solo practitioners"},
+  {id:"1aJJMitcd5sAS2SmS_a69vjMaxKJSuteS", tag:"report", date:"2026-09-04", title:"Legal AI and Vicarious Liability", summary:"When AI invents citations, who is responsible: the lawyer who filed, or the provider? Lessons from US case law.", keywords:"vicarious liability, liability, hallucinations, fake citations, sanctions, US case law, AI providers, responsibility, malpractice, negligence"},
+  {id:"1oWdiSmIcvnWOMh6jKHgRdNssF_yaRSCi", tag:"report", date:"2026-09-04", title:"5 Ways AI Is Already Transforming Nigerian Legal Practice", summary:"From manual files and physical libraries to legal AI as an everyday operational tool.", keywords:"AI adoption, legal practice, law firms, legal research, automation, digital transformation, e-filing, document review"},
+  {id:"17xdqOuA9d4mt1cukGVaEdGBHyF7yjI9U", tag:"guide", date:"2026-09-04", title:"Building Trust in Legal AI: Explainability", summary:"What explainable AI means in legal work, and why trust matters more in law than almost anywhere else.", keywords:"explainability, explainable AI, XAI, trust, transparency, black box, reasoning, sources, citations, contract review"},
+  {id:"1w2SKnVPSKN-NJQZZgUoenyZHmXpE0HJN", tag:"guide", date:"2026-09-04", title:"How to Spot AI Hallucinations Before They Ruin Your Case", summary:"Red flags that a case, quote or citation was invented by a language model.", keywords:"hallucinations, fake cases, fabricated citations, verification, large language models, LLM, court filings, sanctions, red flags"},
+  {id:"1FyJ9d7cZBfDbJ9e9BuY_S8Z66mFp41rN", tag:"guide", date:"2026-09-04", title:"Should You Actually Buy That Legal Tech Tool?", summary:"Four checks before onboarding, including the NDPA 2023, GAID 2025 and the NBA's technology guidelines.", keywords:"procurement, buying software, vendor due diligence, NDPA, GAID 2025, NBA technology guidelines, compliance, data protection, contract review tools"},
+  {id:"1QGf6AaAFpvnGG3CjlZZXm5YBO76THd8Y", tag:"guide", date:"2026-09-04", title:"5 Ethical Traps Nigerian Lawyers Must Avoid When Using AI", summary:"Over-reliance, confidentiality and the duty of competence under the Rules of Professional Conduct.", keywords:"ethics, Rules of Professional Conduct, RPC, competence, confidentiality, over-reliance, unauthorised practice, supervision, professional responsibility"},
+  {id:"11t_xWjUMDPR5hYwnzL2FusEuXA-y5lgu", tag:"guide", date:"2026-09-04", title:"Should You Tell Your Client You Used AI?", summary:"A practical decision process under the RPC 2023, the NBA-SLP Guidelines on AI and the NDPA 2023.", keywords:"disclosure, client consent, transparency, RPC 2023, NBA-SLP Guidelines on AI, confidentiality, Rule 19, NDPA, engagement letters"},
+  {id:"1hrZukqA3NxMDj25ztDCDth53PrPadic1", tag:"guide", date:"2026-09-04", title:"Legal Tech Careers: Roles You've Never Heard Of", summary:"Five emerging roles, from legal technologist to knowledge manager, reshaping the profession.", keywords:"careers, jobs, legal technologist, legal operations, legal ops, knowledge manager, knowledge management, legal engineer, roles"},
+  {id:"1G6j-GnZA4V2zP-hRZ11Pr6pwQTns9bd7", tag:"guide", date:"2026-09-04", title:"Thursday Tips: 5 Signs Your Firm Should Adopt Legal Tech", summary:"Missed deadlines, physical files and the other signs a manual system has stopped working.", keywords:"Thursday Tips, law firm, adoption, missed deadlines, physical files, case management, practice management, digitisation"},
+  {id:"1IIUd325mSl81F0UfkqCNjAGP438bqUt-", tag:"news", date:"2026-09-04", title:"Chioma Wilson-Dike Named Among ILTA's Influential Women in Legal Tech", summary:"Our founder is featured in the 2026 ILTA Awards of Excellence publication.", keywords:"ILTA, award, Awards of Excellence, Influential Women in Legal Tech, recognition, Chioma Wilson-Dike, Lexlytic, founder"},
+  {id:"1ZW_oWNG6CKm1pNHw5pmSsZWaI8X1WCUR", tag:"news", date:"2026-09-04", title:"NLTN Supports LegalTechTalk as Industry Partner", summary:"Connecting Nigeria and the wider African market to one of the world's leading legal innovation conferences.", keywords:"LegalTechTalk, conference, industry partner, London, international, investors, founders, partnership"},
+  {id:"16vJas5bn20xiHkvbXAWy7GXqtEKBuFV_", tag:"news", date:"2026-09-04", title:"Top Legal Tech News from Nigeria and Africa", summary:"Including the Supreme Court's new case management system with mandatory e-filing.", keywords:"news, roundup, Supreme Court, Nigerian Case Management System, NCMS, e-filing, judiciary, Africa, regulatory reforms"},
+  {id:"14PA1H6H6dEl2PlmTBM3dywbNzrJynOWa", tag:"news", date:"2026-09-04", title:"Are We Ready for AI in the Courtroom?", summary:"A free UNESCO and University of Oxford course on AI, justice and the rule of law.", keywords:"courts, courtroom, judges, judiciary, UNESCO, University of Oxford, Saïd Business School, free course, training, rule of law, human rights"},
+  {id:"1iPeSpTYz-Ky1OS6gQM99Ogvh46FOfXmL", tag:"article", date:"2026-09-04", title:"Is the Evidence Act Ready for AI-Generated Evidence?", summary:"Section 84 assumes a human feeding data into a computer. Deepfakes and LLM outputs don't fit that model.", keywords:"evidence, Evidence Act 2011, Section 84, electronic evidence, deepfakes, admissibility, authentication, litigation, LLM outputs"},
+  {id:"1N-FdH4qG7rec4Ueu4Lu1759KJFJp1F1-", tag:"article", date:"2026-09-04", title:"Can AI Be a Sole Arbitrator in Nigeria?", summary:"The statutory barriers to an AI system issuing binding awards that survive judicial oversight.", keywords:"arbitration, ADR, alternative dispute resolution, arbitrator, Arbitration and Mediation Act, arbitral awards, enforcement, courts"},
+  {id:"1MtknNkwRetudvVdaFPKb_HbUab4zXp7m", tag:"article", date:"2026-09-04", title:"Will AI Change What Junior Lawyers Actually Do?", summary:"If machines take on first-year work, how do young lawyers build judgment?", keywords:"junior lawyers, associates, trainees, training, careers, Anthropic, ABA, judgment, delegation, law firms"},
+  {id:"1ZP4qVNlW7_0wykikspNTAC9BfU0N1J4E", tag:"article", date:"2026-09-04", title:"When Clients Arrive Armed with AI-Generated Answers", summary:"How the lawyer's role shifts when clients have already asked a chatbot.", keywords:"clients, client relationships, ChatGPT, chatbots, legal advice, expectations, Magnus Carlsen, trust, legal research"},
+  {id:"1-qpEWVEL76frQEiVg70gCN5sqVdrQBXK", tag:"article", date:"2026-09-04", title:"AI Adoption Exposes Unstructured Data", summary:"Most law firm data is written once, billed once and forgotten. AI turns that into a problem.", keywords:"data, unstructured data, dark data, knowledge management, precedents, time entries, billing, Splunk, PDFs, analytics"},
+  {id:"1eMBrMr1sQx-B2_U11znQhO1TNz2waAod", tag:"article", date:"2026-09-04", title:"Contract Lifecycle Management in Nigeria", summary:"The state of CLM, its challenges and the road ahead, where common law meets digital demand.", keywords:"contracts, CLM, contract lifecycle management, digital transformation, e-signatures, common law, drafting"},
+  {id:"1P7oTfolQS6wc9Jbk5n_M5I-kvkZPIfwT", tag:"article", date:"2026-09-04", title:"What CLM Actually Means for Nigerian Lawyers", summary:"Systems that carry the administrative load, so lawyers keep the judgment work.", keywords:"CLM, contract management, contract lifecycle management, automation, workflow, administrative tasks, negotiation, law firm operations"},
+  {id:"1uTaMha7kRmWEOaD_agHWcNooMcLBdOFq", tag:"article", date:"2026-09-04", title:"You Don't Own That AI Output", summary:"Why copyright law across jurisdictions declines to protect AI-generated work, and what builders should know.", keywords:"copyright, ownership, AI outputs, prompts, intellectual property, IP, authorship, founders, jurisdictions"},
+  {id:"1kaD6RDrbhHFrpSI6eg4kmvc5SxaOcwQA", tag:"article", date:"2026-09-04", title:"Legal AI Myths in Nigeria", summary:"Robots replacing judges and tech only for Lagos firms: the common myths, set against the facts.", keywords:"myths, facts, robots, replacing lawyers, judges, Lagos, access to justice, adoption"},
+  {id:"1zymKZYeZ6iSqIztJlvHWNakB2mHBCmrt", tag:"article", date:"2026-09-04", title:"AI Skills Every Law Student Needs", summary:"AI literacy, prompting and data fluency, alongside the traditional skills they multiply.", keywords:"law students, legal education, AI literacy, prompt engineering, prompting, data fluency, skills, universities"},
+  {id:"1bLjp6k1VNlnaBmvnSsszb77Si7rVNmrn", tag:"article", date:"2026-09-04", title:"Skills That Will Actually Matter for the Next Generation of Nigerian Lawyers", summary:"Separating hype from what helps: new skills as multipliers of core legal ability.", keywords:"skills, young lawyers, careers, technology, judgment, legal education, future of law"},
+  {id:"1R8u09PHasoeU5Ups6y-3FjYJIh21aR4c", tag:"article", date:"2026-09-04", title:"A Wake-Up Call: Ransomware and Big Law", summary:"Over $50 million in ransoms paid by global firms this year, and why Nigerian practices are targets too.", keywords:"ransomware, ransom, WilmerHale, Goodwin, Weil, cyber attacks, cybersecurity, security, Big Law, data breach"},
+  {id:"spotdraft", kind:"post", tag:"event", date:"2026-05-26", photo:"https://i.ibb.co/FL2YCrkQ/1779779819718.jpg", title:"NLTN x SpotDraft: Is Being a Good Lawyer Enough?", summary:"A fireside session with Akshay Verma on what the next generation of in-house lawyers must learn to stay competitive.", keywords:"SpotDraft, Akshay Verma, Chiderah Azodoh, in-house lawyers, in-house counsel, legal operations, legal ops, careers, fireside session, virtual"}
+];
+
+/* =========================================================
+   POLICIES (each opens as its own document in an iframe)
+   ========================================================= */
+const HELLO = "hello@nigerianlegaltech.com";
+const PRIVACY = "privacy@nigerianlegaltech.com";
+const UPDATED = "24 October 2026";
+const POLICY_CSS = `
+  @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,400..900;1,400&family=Geist+Mono&display=swap');
+  *{box-sizing:border-box}
+  html,body{margin:0;overflow-x:hidden}
+  body{background:#FCFCFC;color:#010101;font-family:"Zalando Sans",ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.65;padding:clamp(24px,5vw,64px) clamp(18px,5vw,64px);overflow-wrap:break-word}
+  main{max-width:760px;margin:0 auto}
+  .label{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#979799}
+  h1{font-weight:900;font-size:clamp(30px,5vw,44px);line-height:1.06;letter-spacing:-.025em;margin:12px 0 8px}
+  h2{font-weight:700;font-size:20px;margin:44px 0 10px;padding-top:26px;border-top:1px solid rgba(1,1,1,.12);scroll-margin-top:16px}
+  html{scroll-behavior:smooth}
+  h3{font-weight:700;font-size:16px;margin:24px 0 6px}
+  p,li,td{color:#3a3a3d}
+  ul,ol{padding-left:22px}
+  li{margin:6px 0}
+  a{color:#010101;text-decoration-color:#2AACA3;text-underline-offset:3px;overflow-wrap:anywhere}
+  .intro{font-size:18px;color:#010101}
+  .toc{background:#F3F3F4;border:1px solid rgba(1,1,1,.12);padding:18px 22px;margin:28px 0}
+  .toc ol{margin:8px 0 0;columns:2;column-gap:32px}
+  .toc li{margin:4px 0;break-inside:avoid}
+  @media (max-width:560px){.toc ol{columns:1}}
+  .tbl{width:100%;overflow-x:auto;margin:14px 0}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+  th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid rgba(1,1,1,.12)}
+  th{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#010101;background:#F3F3F4;font-weight:400}
+  .note{border-left:3px solid #2AACA3;padding:4px 0 4px 16px;color:#010101}
+`;
+function policyDoc(title, contact, sections, intro){
+  const toc = sections.map((s,i)=>`<li><a href="#s${i+1}">${s[0]}</a></li>`).join("");
+  const body = sections.map((s,i)=>`<h2 id="s${i+1}">${i+1}. ${s[0]}</h2>${s[1]}`).join("");
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>${POLICY_CSS}</style></head><body><main>
+    <span class="label">Nigerian LegalTech Network</span><h1>${title}</h1><p class="label">Last updated ${UPDATED}</p>
+    <p class="intro">${intro}</p>
+    <nav class="toc" aria-label="Contents"><span class="label">Contents</span><ol>${toc}<li><a href="#contact">Contact us</a></li></ol></nav>
+    ${body}
+    <h2 id="contact">Contact us</h2><p>Questions or requests about this ${title.toLowerCase()} can be sent to <a href="mailto:${contact}" target="_top">${contact}</a>.</p>
+  </main>
+  <script>
+  /* Links inside the policy: Contents jumps within this document; links to another
+     policy open it in the site's viewer; nothing reloads the homepage. */
+  document.addEventListener("click", function(e){
+    var a = e.target.closest("a"); if(!a) return;
+    var pol = a.getAttribute("data-policy");
+    if(pol){ e.preventDefault(); try{ window.parent.openItem(pol); }catch(err){} return; }
+    var href = a.getAttribute("href") || "";
+    if(href.charAt(0) === "#"){
+      e.preventDefault();
+      var t = document.getElementById(href.slice(1));
+      if(t) t.scrollIntoView({behavior:"smooth", block:"start"});
+      return;
+    }
+    if(/^mailto:/.test(href)){ a.target = "_top"; return; }
+    if(/^https?:/.test(href)){ a.target = "_blank"; a.rel = "noopener"; }
+  });
+  <\/script></body></html>`;
+}
+
+const POLICIES = {
+  privacy: {title:"Privacy policy", html: policyDoc("Privacy policy", PRIVACY, [
+    ["Who we are", `<p>The Nigerian LegalTech Network ("NLTN", "we", "us", "our") is a not-for-profit network connecting the people, institutions and ideas that make up Nigeria's legal technology ecosystem. For the purposes of the Nigeria Data Protection Act 2023 (NDPA), the General Application and Implementation Directive 2025 (GAID) and other applicable data protection laws, NLTN is the data controller of the personal data described in this policy.</p>
+      <p>You can contact us about anything in this policy at <a href="mailto:${PRIVACY}">${PRIVACY}</a>.</p>`],
+    ["Scope of this policy", `<p>This policy applies to personal data we collect when you:</p>
+      <ul><li>visit or use this website;</li><li>contact us by email or social media;</li><li>register for, attend or take part in our events, challenges, sessions and programmes, including the Legal Tech Innovation Challenge;</li><li>subscribe to updates, become a member, volunteer, partner or speak with us;</li><li>otherwise interact with NLTN.</li></ul>
+      <p>It does not cover the websites or services of third parties, including those linked from or embedded in this site. Their own privacy policies apply.</p>`],
+    ["Personal data we collect", `<h3>Data you give us</h3>
+      <ul><li><strong>Identity and contact data:</strong> name, email address, phone number, organisation, job title, institution, year of study and country or state.</li>
+      <li><strong>Event and programme data:</strong> the information you submit when registering, such as team details, skills, areas of interest, project submissions, and dietary or accessibility requirements you choose to share.</li>
+      <li><strong>Correspondence:</strong> the content of emails and messages you send us and our replies.</li>
+      <li><strong>Partner and speaker data:</strong> professional profile, biography and photograph where you agree to us using them.</li></ul>
+      <h3>Data collected at events</h3>
+      <ul><li><strong>Photographs, audio and video</strong> taken or recorded at our events and sessions.</li><li>Attendance records and feedback you provide.</li></ul>
+      <h3>Data collected automatically</h3>
+      <p>We do not run analytics, advertising or tracking tools on this website. Your browser stores your cookie choice on your own device (see our <a href="#cookies" data-policy="cookies">Cookie policy</a>). When third-party services that deliver parts of the site load, such as Google Drive, Google Forms and Google Fonts, those providers receive technical data such as your IP address, browser type and the page that requested the content.</p>
+      <h3>Sensitive personal data</h3>
+      <p>We do not ask for sensitive personal data. If you choose to tell us about a health condition or disability so that we can make an event accessible, we will use it only for that purpose and with your explicit consent.</p>`],
+    ["How and why we use your data", `<p>We only process personal data where we have a lawful basis under the NDPA. The table sets out our purposes and the basis we rely on for each.</p>
+      <div class="tbl"><table><thead><tr><th>Purpose</th><th>Lawful basis</th></tr></thead><tbody>
+      <tr><td>Replying to your enquiries and messages</td><td>Legitimate interests in running the network and responding to people who contact us; consent where you start the contact</td></tr>
+      <tr><td>Registering you for events and programmes, running them, judging challenges and awarding prizes</td><td>Performance of the arrangement you enter into by registering</td></tr>
+      <tr><td>Sending event logistics and updates related to a programme you joined</td><td>Performance of that arrangement</td></tr>
+      <tr><td>Sending newsletters, resources and invitations to future events</td><td>Consent, which you can withdraw at any time</td></tr>
+      <tr><td>Publishing event photographs and recordings on our website and social channels</td><td>Legitimate interests in reporting on our work, balanced against your rights; consent where required, for example for close-up portraits</td></tr>
+      <tr><td>Working with partners, speakers and sponsors</td><td>Legitimate interests; performance of an agreement</td></tr>
+      <tr><td>Keeping records for accounting, audit and compliance</td><td>Legal obligation</td></tr>
+      <tr><td>Protecting the security of our services and preventing misuse</td><td>Legitimate interests</td></tr>
+      </tbody></table></div>
+      <p>We do not sell personal data, and we do not use it for automated decision-making that produces legal or similarly significant effects on you. Where judging in a challenge uses scoring criteria, final decisions are made by people.</p>`],
+    ["Event photography and recordings", `<p>Our events are often photographed and recorded so that we can share the work of the community. Where this happens we will tell attendees at the event. If you do not want to appear in published material, tell an organiser on the day or email <a href="mailto:${PRIVACY}">${PRIVACY}</a> and we will avoid featuring you and remove published material where we reasonably can.</p>`],
+    ["Who we share your data with", `<p>We share personal data only where necessary and only with:</p>
+      <ul><li><strong>Service providers</strong> that process data on our behalf, such as Google (Workspace, Drive and Forms) for documents, forms and email, and providers that host this website. They may only use the data to provide their service to us.</li>
+      <li><strong>Event partners, sponsors and judges</strong>, where needed to run an event or programme you have registered for. We will tell you at registration if your details will be shared with a named partner.</li>
+      <li><strong>Professional advisers</strong>, such as lawyers and accountants, under a duty of confidentiality.</li>
+      <li><strong>Regulators, courts and law enforcement</strong>, where the law requires it or to protect the rights, property or safety of NLTN, our community or others.</li>
+      <li>A successor organisation, if NLTN's activities are transferred, which will be bound by this policy.</li></ul>`],
+    ["International transfers", `<p>Some of our service providers store or process data outside Nigeria, including in the United States and the European Union. Where personal data is transferred outside Nigeria, we rely on the transfer mechanisms permitted under the NDPA and GAID, such as the recipient country offering an adequate level of protection, appropriate contractual safeguards, or your consent where no other basis applies.</p>`],
+    ["How long we keep your data", `<div class="tbl"><table><thead><tr><th>Data</th><th>Retention</th></tr></thead><tbody>
+      <tr><td>Enquiries and correspondence</td><td>Up to 24 months after our last contact with you</td></tr>
+      <tr><td>Event and programme registrations</td><td>Up to 24 months after the event, so we can report on and improve our programmes</td></tr>
+      <tr><td>Prize, payment and financial records</td><td>Up to 6 years, to meet accounting and legal requirements</td></tr>
+      <tr><td>Mailing list details</td><td>Until you unsubscribe or withdraw consent</td></tr>
+      <tr><td>Published photographs and recordings</td><td>As long as they remain relevant to our work, unless you ask us to remove them</td></tr>
+      <tr><td>Your cookie choice (stored in your browser)</td><td>12 months, or until you clear it</td></tr>
+      </tbody></table></div>
+      <p>When data is no longer needed, we delete it or anonymise it securely.</p>`],
+    ["How we protect your data", `<p>We use appropriate technical and organisational measures to protect personal data against loss, misuse and unauthorised access. These include access controls and two-factor authentication on our accounts, sharing data only with people who need it, and choosing reputable service providers. No system is completely secure. If a personal data breach occurs that is likely to put your rights and freedoms at risk, we will notify the Nigeria Data Protection Commission and, where required, you, within the timeframes set by law.</p>`],
+    ["Your rights", `<p>Under the NDPA you have the right to:</p>
+      <ul><li><strong>be informed</strong> about how we use your personal data;</li>
+      <li><strong>access</strong> the personal data we hold about you and receive a copy;</li>
+      <li><strong>correct</strong> data that is inaccurate or incomplete;</li>
+      <li><strong>have your data deleted</strong> where there is no longer a lawful reason for us to keep it;</li>
+      <li><strong>restrict</strong> how we use your data in certain circumstances;</li>
+      <li><strong>object</strong> to processing based on legitimate interests, and to direct marketing at any time;</li>
+      <li><strong>data portability:</strong> receive your data in a commonly used, machine-readable format, or have it sent to another controller;</li>
+      <li><strong>withdraw consent</strong> at any time, without affecting processing that took place before;</li>
+      <li><strong>not be subject to decisions based solely on automated processing</strong> that produce legal or similarly significant effects.</li></ul>`],
+    ["How to exercise your rights", `<p>Email <a href="mailto:${PRIVACY}">${PRIVACY}</a> with the subject "Data request" and tell us which right you want to use. We may need to confirm your identity before acting. We do not charge a fee unless a request is clearly unfounded or excessive, and we will respond within the time required by law. You can unsubscribe from our emails at any time using the link in each email.</p>
+      <p class="note">If you are unhappy with how we have handled your data, please contact us first so we can try to resolve it. You also have the right to complain to the Nigeria Data Protection Commission (NDPC).</p>`],
+    ["Children", `<p>This website is not directed at children. Our programmes are designed for university students and professionals. If someone under 18 wishes to take part in a programme, we will ask for the consent of a parent or guardian. If you believe we hold a child's data without appropriate consent, contact us and we will delete it.</p>`],
+    ["Third-party websites and embedded content", `<p>This site shows documents through Google Drive, registration forms through Google Forms and images from external hosts, and links to LinkedIn and Instagram. These services are controlled by their providers, who decide how they process your data. We encourage you to read their privacy policies.</p>`],
+    ["Changes to this policy", `<p>We may update this policy as our activities or the law change. The date at the top shows when it was last updated. Where changes are significant, we will tell people we are in contact with.</p>`]
+  ], `This policy explains what personal data the Nigerian LegalTech Network collects, why we collect it, how we keep it safe, and the rights you have over it under the Nigeria Data Protection Act 2023.`)},
+
+  terms: {title:"Terms of use", html: policyDoc("Terms of use", HELLO, [
+    ["About these terms", `<p>These terms govern your access to and use of the Nigerian LegalTech Network website, including its resources, documents, forms and other content (the "site"). The site is operated by the Nigerian LegalTech Network ("NLTN", "we", "us", "our"). By using the site you agree to these terms. If you do not agree, please do not use the site.</p>`],
+    ["Not legal advice", `<p class="note">The articles, reports, guides, news and other resources on this site are provided for general information and education only. They are not legal advice and must not be relied on as such.</p>
+      <p>Using the site, reading our resources or contacting us does not create a lawyer-client relationship with NLTN or any contributor. Laws, regulations and technology change quickly, and content may not reflect the latest position. Always take advice from a qualified legal practitioner about your own circumstances before acting.</p>`],
+    ["Who can use the site", `<p>The site is open to everyone. Some events and programmes have their own eligibility requirements, such as being enrolled at an accredited Nigerian university, which we will set out when registration opens.</p>`],
+    ["Our content and intellectual property", `<p>Unless stated otherwise, NLTN owns or licenses the intellectual property in the site and its content, including text, reports, graphics, the NLTN name, the Nexus logomark, the brand signature and other brand assets. Contributions credited to named authors remain theirs and are published with permission.</p>
+      <h3>What you may do</h3>
+      <ul><li>View, read and download resources for your own personal, educational or internal professional use.</li><li>Share links to the site and our resources.</li><li>Quote short extracts with clear credit to NLTN and, where relevant, the author.</li></ul>
+      <h3>What you may not do without our written permission</h3>
+      <ul><li>Republish, sell, license or commercially exploit our content.</li><li>Alter our resources, or remove credits or copyright notices.</li><li>Use the NLTN name, logo or brand assets, or suggest an endorsement, partnership or affiliation that does not exist.</li><li>Use our content to train or fine-tune AI models, or scrape the site systematically.</li></ul>`],
+    ["Acceptable use", `<p>You agree not to:</p>
+      <ul><li>use the site in any way that breaks the law or infringes anyone's rights;</li><li>attempt to gain unauthorised access to the site, its hosting or connected services;</li><li>introduce viruses or other harmful code, or disrupt the site's operation;</li><li>impersonate NLTN or any other person or organisation;</li><li>submit false, misleading, defamatory or offensive information through our forms or channels.</li></ul>`],
+    ["Events, challenges and programmes", `<p>Registration for events, challenges and programmes, including the Legal Tech Innovation Challenge, may be subject to additional rules, which we will share with participants and which apply alongside these terms. In particular:</p>
+      <ul><li>Registration does not guarantee a place. We may close registration, limit numbers or select participants.</li><li>We may change dates, venues, formats, speakers or prizes where necessary, and will tell registered participants as soon as reasonably possible.</li><li>Participants must follow the event's code of conduct. We may remove anyone whose behaviour is unsafe, discriminatory or disruptive.</li><li>Prizes are awarded according to the published rules and the judges' decision, which is final.</li><li>Unless the event rules say otherwise, participants keep ownership of the solutions they build.</li><li>Events may be photographed and recorded. See our <a href="#privacy" data-policy="privacy">Privacy policy</a> for how this is handled.</li></ul>`],
+    ["Third-party content and links", `<p>The site displays content through third-party services, including Google Drive and Google Forms, and links to other websites such as LinkedIn and Instagram. We do not control these services and are not responsible for their content, availability or practices. Your use of them is governed by their own terms.</p>`],
+    ["Availability and accuracy", `<p>We aim to keep the site available and its content accurate and up to date, but we provide the site "as is" and "as available". We do not guarantee that it will be uninterrupted, error-free or free of harmful components, or that content is complete or current. We may change, suspend or withdraw any part of the site at any time.</p>`],
+    ["Limitation of liability", `<p>To the fullest extent permitted by law, NLTN, its founders, team members, volunteers and contributors are not liable for any loss or damage arising from your use of, or inability to use, the site, or from reliance on any content on it. This includes indirect or consequential loss, loss of data, income, profit or opportunity, and loss caused by third-party services. Nothing in these terms excludes liability that cannot be excluded by law.</p>`],
+    ["Indemnity", `<p>You agree to compensate NLTN for losses, claims and reasonable costs arising from your breach of these terms or your misuse of the site.</p>`],
+    ["Privacy and cookies", `<p>Our <a href="#privacy" data-policy="privacy">Privacy policy</a> and <a href="#cookies" data-policy="cookies">Cookie policy</a> explain how we handle personal data and cookies. They form part of these terms.</p>`],
+    ["Changes to these terms", `<p>We may update these terms from time to time. The date at the top shows when they were last updated. Continuing to use the site after a change means you accept the updated terms.</p>`],
+    ["General", `<ul><li>If any part of these terms is found to be unenforceable, the rest remains in effect.</li><li>If we do not enforce a right immediately, we do not give it up.</li><li>These terms, with the policies they refer to, are the whole agreement between you and NLTN about your use of the site.</li></ul>`],
+    ["Governing law and disputes", `<p>These terms are governed by the laws of the Federal Republic of Nigeria. We will try to resolve any dispute informally first, so please contact us. If a dispute cannot be resolved, the courts of the Federal Republic of Nigeria will have jurisdiction.</p>`]
+  ], `These terms set out the rules for using the Nigerian LegalTech Network website and the resources we publish on it.`)},
+
+  cookies: {title:"Cookie policy", html: policyDoc("Cookie policy", PRIVACY, [
+    ["What cookies are", `<p>Cookies are small text files placed on your device when you visit a website. Similar technologies, such as browser local storage, work in a comparable way. They can be set by the site you are visiting (first-party) or by other services whose content appears on that site (third-party).</p>`],
+    ["Our approach", `<p class="note">NLTN does not set its own tracking cookies, and does not use analytics, advertising or social media tracking on this site.</p>
+      <p>Parts of the site, such as our document previews and registration forms, are delivered by Google. Google may set cookies when that content loads.</p>`],
+    ["What we store on your device", `<div class="tbl"><table><thead><tr><th>Name</th><th>Type</th><th>Purpose</th><th>Duration</th></tr></thead><tbody>
+      <tr><td>nltn-consent</td><td>Local storage, strictly necessary</td><td>Remembers whether you accepted or declined third-party content, so we don't ask on every visit</td><td>12 months</td></tr>
+      </tbody></table></div>
+      <p>This entry stays in your browser. It is never sent to us, and it does not identify you.</p>`],
+    ["Third-party services", `<div class="tbl"><table><thead><tr><th>Provider</th><th>What it does on this site</th><th>When it loads</th></tr></thead><tbody>
+      <tr><td>Google Drive</td><td>Shows live previews of documents on resource cards and near the top of the homepage, and full documents in the on-site viewer</td><td>Previews: when that part of the page comes into view. Full documents: when you open one</td></tr>
+      <tr><td>Google Forms</td><td>Displays event registration forms</td><td>When you open a registration form</td></tr>
+      <tr><td>Google Fonts</td><td>Delivers our typefaces and icons</td><td>On every visit. Google Fonts does not set cookies, but Google receives your IP address to deliver the files</td></tr>
+      <tr><td>Image hosting</td><td>Delivers some logos and photographs</td><td>On every visit</td></tr>
+      </tbody></table></div>
+      <p>If you are signed in to a Google account, Google may associate activity from embedded content with that account. For details, see Google's privacy policy and cookie information.</p>`],
+    ["Your choices", `<ul><li><strong>Accept all:</strong> you agree to the use of cookies as described in this policy. If we ever add optional cookies, such as analytics, we will ask you again.</li>
+      <li><strong>Decline all:</strong> NLTN will not set any optional cookies for you. Document previews and forms are still shown, because they are how our resources are displayed. To stop Google setting cookies through them, block third-party cookies in your browser settings. Some previews may then not display.</li></ul>
+      <p>You can change your choice at any time using "Cookie settings" at the bottom of every page.</p>`],
+    ["Managing cookies in your browser", `<p>Most browsers let you block or delete cookies and site data in their settings. Blocking third-party cookies may stop embedded documents or forms from displaying correctly. Clearing your browser's site data also clears your cookie choice, and we will ask again on your next visit.</p>`],
+    ["Changes to this policy", `<p>We will update this policy if the way the site uses cookies or similar technologies changes. The date at the top shows when it was last updated.</p>`]
+  ], `This policy explains how cookies and similar technologies are used on the Nigerian LegalTech Network website, and the choices you have.`)}
+};
+
+/* =========================================================
+   Helpers
+   ========================================================= */
+const TAGS = [
+  {key:"all", label:"All"},
+  {key:"report", label:"Reports"},
+  {key:"article", label:"Articles"},
+  {key:"guide", label:"Guides"},
+  {key:"event", label:"Events"},
+  {key:"news", label:"News"}
+];
+const TAG_NAME = {report:"Report", article:"Article", guide:"Guide", event:"Event", news:"News"};
+const PAGE = 9;
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+const fmtDate = r => { const [y,m,d] = r.date.split("-").map(Number); return (r.day ? d+" " : "") + MONTHS[m-1] + " " + y; };
+const preview = id => `https://drive.google.com/file/d/${id}/preview`;
+
+/* Cookie choice: stored for 12 months */
+const CONSENT_KEY = "nltn-consent";
+function getConsent(){
+  try{
+    const v = JSON.parse(localStorage.getItem(CONSENT_KEY) || "null");
+    if(!v || !v.c || Date.now() - v.t > 365*24*3600*1000) return null;
+    return v.c;
+  }catch(e){ return null; }
+}
+function setConsent(c){ try{ localStorage.setItem(CONSENT_KEY, JSON.stringify({c, t:Date.now()})); }catch(e){} }
+let consent = getConsent();
+
+/* Placeholder covers (used until previews are allowed, and as a fallback) */
+function hash(s){let h=2166136261;for(const c of s){h^=c.charCodeAt(0);h=Math.imul(h,16777619);}return h>>>0;}
+function rng(seed){return ()=>{seed=(seed+0x6D2B79F5)|0;let t=Math.imul(seed^(seed>>>15),1|seed);t^=t+Math.imul(t^(t>>>7),61|t);return((t^(t>>>14))>>>0)/4294967296;};}
+function coverSVG(r){
+  const rand = rng(hash(r.id));
+  const cols=12, rows=7, W=480, H=300, pad=44, cell=(W-pad*2)/cols, s=cell*.34;
+  const dark = r.tag==="report" || r.tag==="event";
+  const ink = dark ? "rgba(252,252,252," : "rgba(1,1,1,";
+  let out = "";
+  for(let y=0;y<rows;y++) for(let x=0;x<cols;x++){
+    const cx = pad + x*cell + cell/2, cy = 58 + y*((H-116)/(rows-1)), v = rand();
+    if(v<.12) out += `<rect x="${cx-s}" y="${cy-s}" width="${s*2}" height="${s*2}" fill="${ink}.85)"/>`;
+    else if(v<.3) out += `<rect x="${cx-s}" y="${cy-s}" width="${s*2}" height="${s*2}" fill="none" stroke="${ink}.35)" stroke-width="1"/>`;
+    else out += `<circle cx="${cx}" cy="${cy}" r="1.2" fill="${ink}.28)"/>`;
+  }
+  const gx = pad + Math.floor(rand()*cols)*cell + cell/2, gy = 58 + Math.floor(rand()*rows)*((H-116)/(rows-1));
+  out += `<rect x="${gx-s}" y="${gy-s}" width="${s*2}" height="${s*2}" fill="#2AACA3"/>`;
+  return `<svg class="pat" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${out}</svg>`;
+}
+
+/* =========================================================
+   Events
+   ========================================================= */
+function eventCard(e){
+  const past = e.status === "past";
+  return `<article class="ev-card">
+    <button class="ev-media" type="button" data-open="${e.id}" aria-label="${esc(e.title)}: event details">
+      <img src="${e.image}" alt="" loading="lazy" style="object-position:${e.imgPos||"center"}">
+      <span class="pill${past?" past":""}"><i></i>${esc(e.badge)}</span>
+    </button>
+    <div class="ev-body">
+      <div class="ev-meta"><span><span class="ms" aria-hidden="true">calendar_month</span>${esc(e.when)}</span><span><span class="ms" aria-hidden="true">location_on</span>${esc(e.location)}</span></div>
+      <h4>${esc(e.title)}</h4>
+      <p>${esc(e.summary)}</p>
+      <div class="ev-actions">
+        ${e.register && !past ? `<button class="btn btn-solid" type="button" data-open="${e.id}-register">Register <span class="ms" aria-hidden="true">arrow_forward</span></button>` : ""}
+        <button class="btn" type="button" data-open="${e.id}">${past ? "Read the recap" : "Event details"}</button>
+      </div>
+    </div>
+  </article>`;
+}
+const soonCard = `<div class="ev-soon"><div class="sq" aria-hidden="true"></div><h4>More events coming soon</h4><p>Follow NLTN to hear first when new events and sessions are announced.</p><div class="links"><a href="https://www.linkedin.com/company/nigerianlegaltechnetwork/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/nigerianlegaltechnetwork/" target="_blank" rel="noopener">Instagram</a></div></div>`;
+const upcoming = EVENTS.filter(e=>e.status==="upcoming"), pastEv = EVENTS.filter(e=>e.status==="past");
+document.getElementById("upcoming").innerHTML = upcoming.map(eventCard).join("") + (upcoming.length % 3 !== 0 || !upcoming.length ? soonCard : "");
+document.getElementById("past").innerHTML = pastEv.map(eventCard).join("");
+document.getElementById("upCount").textContent = `${upcoming.length} upcoming`;
+document.getElementById("pastCount").textContent = `${pastEv.length} past`;
+const REGISTER = {};
+EVENTS.forEach(e=>{ if(e.register) REGISTER[e.id+"-register"] = {title:"Register: "+e.title, src:e.register}; });
+
+/* =========================================================
+   Resources
+   ========================================================= */
+const grid = document.getElementById("grid");
+RESOURCES.sort((a,b)=> b.date.localeCompare(a.date));
+grid.innerHTML = RESOURCES.map((r,i)=>{
+  const no = String(i+1).padStart(2,"0");
+  const isDoc = !r.photo;
+  return `<article class="card" data-tag="${r.tag}" data-id="${r.id}">
+    <div class="cover t-${r.tag}${r.photo ? " has-photo" : ""}"${isDoc ? ` data-doc="${r.id}"` : ""}>
+      ${r.photo ? `<img class="photo" src="${r.photo}" alt="" loading="lazy">` : coverSVG(r)}
+      <div class="c-top"><span>NLTN / ${TAG_NAME[r.tag]}</span><span>No. ${no}</span></div>
+      <button class="shield" type="button" data-open="${r.id}" aria-label="Open ${esc(r.title)}"><span>Open <span class="ms" aria-hidden="true">open_in_full</span></span></button>
+    </div>
+    <button class="card-text" type="button" data-open="${r.id}">
+      <span class="meta"><span class="tag">${TAG_NAME[r.tag]}</span><span class="sep"></span><time datetime="${r.date}">${fmtDate(r)}</time></span>
+      <span class="ct">${esc(r.title)}</span>
+      <span class="cs">${esc(r.summary)}</span>
+    </button>
+  </article>`;
+}).join("");
+
+/* Live previews on cards: created exactly like the homepage report preview,
+   which loads the Drive /preview page straight into an iframe. Each card's preview
+   is created when the card comes near the screen, so 30+ documents don't load at once. */
+function mountThumb(cover){
+  if(cover.querySelector("iframe")) return;
+  const l = document.createElement("span"); l.className = "loading"; l.textContent = "Loading preview";
+  const f = document.createElement("iframe");
+  f.title = "Document preview"; f.tabIndex = -1; f.src = preview(cover.dataset.doc);
+  f.addEventListener("load",()=>{ f.classList.add("loaded"); cover.classList.add("showing"); l.remove(); });
+  cover.insertBefore(l, cover.querySelector(".c-top"));
+  cover.insertBefore(f, cover.querySelector(".c-top"));
+}
+const thumbIO = "IntersectionObserver" in window ? new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ mountThumb(e.target); thumbIO.unobserve(e.target); } });
+},{rootMargin:"400px"}) : null;
+function observeThumbs(){
+  grid.querySelectorAll(".card:not([hidden]) .cover[data-doc]").forEach(c=>{
+    if(thumbIO) thumbIO.observe(c); else mountThumb(c);
+  });
+}
+
+/* Filters and search
+   Search looks at each resource's title, summary, type, date and hidden keywords.
+   Every word typed must match. Title matches rank first; ties stay newest first.
+   Share a search with a link like /#resources?q=arbitration */
+const filtersEl = document.getElementById("filters");
+filtersEl.innerHTML = TAGS.map(t=>`<button type="button" data-filter="${t.key}" aria-pressed="${t.key==="all"}">${t.label} <span class="count"></span></button>`).join("");
+let current = "all", limit = PAGE, query = "";
+const moreBtn = document.getElementById("moreBtn");
+const searchEl = document.getElementById("resSearch"), clearEl = document.getElementById("resClear");
+const norm = t => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[’']/g,"").replace(/&/g," and ").replace(/[^a-z0-9]+/g," ").trim();
+const INDEX = {};
+RESOURCES.forEach(r=>{
+  INDEX[r.id] = {
+    title: norm(r.title),
+    rest: norm([r.summary, TAG_NAME[r.tag], r.tag==="news" ? "news" : r.tag+"s", fmtDate(r), r.keywords||""].join(" ")),
+    rTitle: r.title, rSummary: r.summary
+  };
+});
+const ORDER = RESOURCES.map(r=>r.id);   // newest first
+function scoreOf(id, words){
+  if(!words.length) return 1;
+  const ix = INDEX[id]; let score = 0;
+  for(const w of words){
+    const inTitle = (" "+ix.title+" ").includes(" "+w) ;
+    const inRest = (" "+ix.rest+" ").includes(" "+w);
+    if(!inTitle && !inRest) return 0;          // every word must match
+    score += inTitle ? 10 : 1;
+  }
+  return score;
+}
+function highlight(text, words){
+  let html = esc(text);
+  if(!words.length) return html;
+  const src = words.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|");
+  return html.replace(new RegExp(`(^|[^A-Za-z0-9])(${src})`,"gi"), (m,pre,hit)=>`${pre}<mark class="hl">${hit}</mark>`);
+}
+function render(animate){
+  const words = norm(query).split(" ").filter(Boolean);
+  const scored = ORDER.map((id,i)=>({id, i, s:scoreOf(id, words)})).filter(x=>x.s>0);
+  if(words.length) scored.sort((a,b)=> b.s - a.s || a.i - b.i);
+  const byId = {}; grid.querySelectorAll(".card").forEach(c=>byId[c.dataset.id]=c);
+  // counts per type for the current search
+  TAGS.forEach(t=>{
+    const n = scored.filter(x=> t.key==="all" || byId[x.id].dataset.tag===t.key).length;
+    filtersEl.querySelector(`[data-filter="${t.key}"] .count`).textContent = n;
+  });
+  const matching = scored.filter(x=> current==="all" || byId[x.id].dataset.tag===current).map(x=>byId[x.id]);
+  // order cards to match ranking; non-matches hidden at the end
+  matching.forEach(c=>grid.appendChild(c));
+  Object.values(byId).forEach(c=>{ if(!matching.includes(c)){ grid.appendChild(c); c.hidden = true; } });
+  matching.forEach((c,i)=>{
+    c.classList.remove("in");
+    const ix = INDEX[c.dataset.id];
+    c.querySelector(".ct").innerHTML = highlight(ix.rTitle, words);
+    c.querySelector(".cs").innerHTML = highlight(ix.rSummary, words);
+    c.hidden = i >= limit;
+    if(!c.hidden && animate){ void c.offsetWidth; c.classList.add("in"); }
+  });
+  const shown = Math.min(limit, matching.length);
+  const typeName = current==="all" ? "resources" : TAGS.find(t=>t.key===current).label.toLowerCase();
+  const status = document.getElementById("filterStatus");
+  if(words.length){
+    status.textContent = matching.length
+      ? `${matching.length} ${matching.length===1 ? "result" : "results"} for “${query.trim()}”${current==="all" ? "" : " in " + typeName}${shown<matching.length ? `, showing ${shown}` : ""}`
+      : "";
+  } else {
+    status.textContent = `Showing ${shown} of ${matching.length} ${matching.length===1 ? typeName.replace(/s$/,"") : typeName}`;
+  }
+  const none = matching.length === 0;
+  document.getElementById("noResults").hidden = !none;
+  document.getElementById("noResultsText").textContent = words.length ? `No resources match “${query.trim()}”${current==="all" ? "" : " in " + typeName}.` : `No ${typeName} yet.`;
+  status.hidden = none;
+  moreBtn.parentElement.hidden = matching.length <= limit;
+  moreBtn.textContent = `Show more (${matching.length - shown})`;
+  clearEl.hidden = !query;
+  observeThumbs();
+}
+filtersEl.addEventListener("click",e=>{
+  const b = e.target.closest("button[data-filter]"); if(!b) return;
+  current = b.dataset.filter; limit = PAGE;
+  filtersEl.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", String(x===b)));
+  render(true);
+});
+moreBtn.addEventListener("click",()=>{ limit += PAGE; render(true); });
+
+/* Keep the address in step with the search so it can be shared */
+function syncSearchUrl(){
+  if(document.getElementById("modal").classList.contains("open")) return;
+  const q = query.trim();
+  const target = q ? "#resources?q=" + encodeURIComponent(q) : "";
+  const now = location.hash;
+  if(q && now !== target) { try{ history.replaceState(null,"",location.pathname+location.search+target); }catch(e){} }
+  if(!q && now.startsWith("#resources?q=")) { try{ history.replaceState(null,"",location.pathname+location.search); }catch(e){} }
+}
+let searchTimer = null;
+function setQuery(q, opts={}){
+  query = q; limit = PAGE;
+  if(searchEl.value !== q) searchEl.value = q;
+  render(!opts.quiet);
+  syncSearchUrl();
+}
+searchEl.addEventListener("input",()=>{
+  clearEl.hidden = !searchEl.value;
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(()=>setQuery(searchEl.value), 160);
+});
+searchEl.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); clearTimeout(searchTimer); setQuery(searchEl.value); } });
+clearEl.addEventListener("click",()=>{ setQuery(""); searchEl.focus(); });
+document.getElementById("noResultsClear").addEventListener("click",()=>{
+  current = "all";
+  filtersEl.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", String(x.dataset.filter==="all")));
+  setQuery(""); searchEl.focus();
+});
+function searchFromHash(){
+  const h = location.hash;
+  if(!h.startsWith("#resources?q=")) return false;
+  const q = decodeURIComponent(h.slice("#resources?q=".length).replace(/\+/g," "));
+  if(q === query) return true;      // e.g. returning from the viewer: keep the scroll position
+  setQuery(q, {quiet:true});
+  const sec = document.getElementById("resources");
+  requestAnimationFrame(()=>sec.scrollIntoView({behavior:"auto", block:"start"}));
+  return true;
+}
+render(false);
+
+/* =========================================================
+   Hero preview (live only once previews are allowed)
+   ========================================================= */
+const HERO_DOC = "13fuLUVG5PQS5z0uujDFI-LcYMTgyMpqa";
+const heroDoc = RESOURCES.find(r=>r.id===HERO_DOC);
+document.getElementById("heroStage").innerHTML = `<div class="frame">
+  <div class="frame-bar"><div class="dots"><i></i><i></i><i></i></div><div class="frame-url">nltn / resources / report</div><span class="frame-tag">Report</span></div>
+  <div class="viewport" id="heroVp">
+    <button class="shield" type="button" data-open="${HERO_DOC}" aria-label="Open ${esc(heroDoc.title)}"><span>Read the report <span class="ms" aria-hidden="true">open_in_full</span></span></button>
+  </div></div>`;
+const heroVp = document.getElementById("heroVp");
+function renderHero(){
+  const l = document.createElement("span"); l.className="loading"; l.textContent="Loading preview"; heroVp.prepend(l);
+  const f = document.createElement("iframe");
+  f.title = heroDoc.title; f.tabIndex = -1; f.src = preview(HERO_DOC);
+  f.addEventListener("load",()=>{ f.classList.add("loaded"); l.remove(); });
+  heroVp.insertBefore(f, heroVp.querySelector(".shield"));
+}
+renderHero();
+
+/* =========================================================
+   Viewer (modal): documents, write-ups, forms and policies
+   ========================================================= */
+const modal = document.getElementById("modal"), body = document.getElementById("modalBody");
+let lastFocus = null;
+const isModalOpen = () => modal.classList.contains("open");
+/* Shareable links: every item the viewer opens has its own address,
+   e.g. /#privacy, /#terms, /#cookies, /#ltic, /#ltic-register, /#<resource-title> */
+const slugify = t => t.toLowerCase().replace(/['’]/g,"").replace(/&/g," and ").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+const HASH_OF = {}, KEY_OF = {};
+function addLink(key, hash){ HASH_OF[key] = hash; KEY_OF[hash] = key; }
+Object.keys(POLICIES).forEach(k=>addLink(k,k));
+Object.keys(POSTS).forEach(k=>addLink(k,k));
+Object.keys(REGISTER).forEach(k=>addLink(k,k));
+RESOURCES.forEach(r=>{ if(!HASH_OF[r.id]) addLink(r.id, slugify(r.title)); });
+const currentHash = () => decodeURIComponent(location.hash.slice(1));
+let pushed = 0;          // viewer entries added to the browser history
+let openKey = null;
+
+function openItem(key, opts={}){
+  const r = RESOURCES.find(x=>x.id===key);
+  let tag, title, html, srcdoc = null;
+  if(POSTS[key]){
+    const ev = EVENTS.find(e=>e.id===key);
+    tag = "Event"; title = ev ? ev.title : (r ? r.title : "");
+    html = `<div class="post"><div class="post-inner">${POSTS[key]}</div></div>`;
+  } else if(r){
+    tag = TAG_NAME[r.tag]; title = r.title;
+    html = `<span class="loading">Loading document</span><iframe src="${preview(r.id)}" title="${esc(r.title)}" allow="autoplay"></iframe>`;
+  } else if(REGISTER[key]){
+    tag = "Registration"; title = REGISTER[key].title;
+    html = `<span class="loading">Loading form</span><iframe src="${REGISTER[key].src}" title="${esc(title)}"></iframe>`;
+  } else if(POLICIES[key]){
+    tag = "Legal"; title = POLICIES[key].title;
+    html = `<iframe class="policy" title="${esc(title)}"></iframe>`; srcdoc = POLICIES[key].html;
+  } else return;
+  if(!isModalOpen()) lastFocus = document.activeElement;
+  hideBanner();
+  openKey = key;
+  const hash = HASH_OF[key];
+  if(hash && !opts.fromHistory && currentHash() !== hash){
+    try{ history.pushState({nltn:key}, "", "#" + hash); pushed++; }catch(e){}
+  }
+  document.getElementById("modalTag").textContent = tag;
+  document.getElementById("modalTitle").textContent = title;
+  body.innerHTML = html;
+  const f = body.querySelector("iframe");
+  if(f){
+    if(srcdoc) f.srcdoc = srcdoc;
+    f.addEventListener("load",()=>{ const l=body.querySelector(".loading"); if(l) l.remove(); });
+  }
+  body.scrollTop = 0;
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+  document.getElementById("modalClose").focus();
+}
+window.openItem = openItem;   // used by links inside the policy documents
+
+function clearHash(){
+  try{ history.replaceState(null, "", location.pathname + location.search); }catch(e){}
+}
+function hideModal(){
+  modal.classList.remove("open");
+  body.innerHTML = "";
+  document.body.style.overflow = "";
+  openKey = null;
+  if(consent === null) showBanner();
+  if(lastFocus && document.contains(lastFocus)) lastFocus.focus();
+}
+function closeModal(){
+  if(pushed > 0){ const n = pushed; pushed = 0; closingViaHistory = true; history.go(-n); }
+  else if(KEY_OF[currentHash()]) clearHash();
+  hideModal();
+}
+let closingViaHistory = false;
+window.addEventListener("popstate",()=>{
+  if(closingViaHistory){ closingViaHistory = false; if(KEY_OF[currentHash()]) clearHash(); return; }
+  const key = KEY_OF[currentHash()];
+  if(pushed > 0) pushed--;
+  if(key) openItem(key, {fromHistory:true});
+  else if(isModalOpen()) hideModal();
+});
+
+/* Copy link to the open item */
+document.getElementById("modalCopy").addEventListener("click", async ()=>{
+  const btn = document.getElementById("modalCopy"), lbl = btn.querySelector(".txt");
+  const url = location.origin + location.pathname + "#" + (HASH_OF[openKey] || "");
+  let ok = false;
+  try{ await navigator.clipboard.writeText(url); ok = true; }catch(e){
+    try{ const t=document.createElement("textarea"); t.value=url; document.body.appendChild(t); t.select(); ok=document.execCommand("copy"); t.remove(); }catch(e2){}
+  }
+  lbl.textContent = ok ? "Link copied" : "Copy failed";
+  setTimeout(()=>{ lbl.textContent = "Copy link"; }, 1800);
+});
+
+document.addEventListener("click",e=>{
+  const t = e.target.closest("[data-open]");
+  if(t){ e.preventDefault(); openItem(t.dataset.open); }
+});
+document.getElementById("modalClose").addEventListener("click",closeModal);
+modal.addEventListener("click",e=>{ if(e.target===modal) closeModal(); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && isModalOpen()) closeModal(); });
+
+/* =========================================================
+   Cookie banner: never shown at the same time as the viewer
+   ========================================================= */
+const banner = document.getElementById("consent");
+function showBanner(){ if(isModalOpen()) return; banner.hidden = false; }
+function hideBanner(){ banner.hidden = true; }
+function choose(c){ consent = c; setConsent(c); hideBanner(); }
+document.getElementById("cAccept").addEventListener("click",()=>choose("accepted"));
+document.getElementById("cDecline").addEventListener("click",()=>choose("declined"));
+document.getElementById("cRead").addEventListener("click",()=>openItem("cookies"));
+document.getElementById("cookieSettings").addEventListener("click",showBanner);
+/* Arriving on a shared link opens that item first; the cookie pop-up waits until it is closed.
+   A shared search link (#resources?q=...) fills in the search. */
+if(KEY_OF[currentHash()]) openItem(KEY_OF[currentHash()], {fromHistory:true});
+searchFromHash();
+window.addEventListener("hashchange", searchFromHash);
+if(consent === null) showBanner();
+
+/* Nav */
+const nav = document.getElementById("nav"), menuBtn = document.getElementById("menuBtn"), links = document.getElementById("navLinks");
+const onScroll = ()=> nav.classList.toggle("scrolled", window.scrollY > 10);
+window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+function setMenu(open){
+  links.classList.toggle("open", open);
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.querySelector(".ms").textContent = open ? "close" : "menu";
+}
+menuBtn.addEventListener("click",()=>setMenu(!links.classList.contains("open")));
+links.addEventListener("click",e=>{ if(e.target.closest("a")) setMenu(false); });
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
