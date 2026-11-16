@@ -117,7 +117,16 @@ Search for `const EVENTS`. Each event shows as a card in **Upcoming** or **Past 
 | `status` | `upcoming` or `past`. Move an event to `past` once it has happened |
 | `badge` | Label on the image, e.g. "Registration open", "Fireside chat" |
 | `image` | Square-friendly image. Optional `imgPos:"center 40%"` adjusts the crop |
-| `register` | Optional, upcoming events only. Use a Google Form link ending in `viewform?embedded=true` so it opens on the site. Creates the link `/#my-event-register` |
+| `register` | Optional, upcoming events only. Creates the link `/#my-event-register` and opens registration on the site. Use an **embed** link, not the normal page link (see below) |
+
+**Registration embed links**
+
+| Platform | What to use |
+|---|---|
+| Google Forms | The form link ending in `viewform?embedded=true` |
+| Luma | `https://luma.com/embed/event/EVENT_ID/simple`. The event ID starts with `evt-` and isn't in the short `luma.com/abc123` link. In Luma, open the event's **Share → Embed Event** to copy it |
+
+Example: the Next Generation Lawyer event uses `https://luma.com/embed/event/evt-GCxHreAzGTq2ng8/simple`.
 
 Each event also needs a write-up in `const POSTS` under the same `id`. Copy an existing one, such as `"spotdraft"`, and edit the text. Write-ups use plain HTML: `<p>`, `<h3>`, a `<dl>` for details, and `<blockquote class="pq">` for quotes.
 
@@ -160,6 +169,7 @@ Everything that opens in the viewer has its own address. Opening the link lands 
 | `/#privacy` · `/#terms` · `/#cookies` | The policies |
 | `/#ltic` | LTIC 2.0 write-up |
 | `/#ltic-register` | LTIC 2.0 registration form |
+| `/#next-gen-lawyer` · `/#next-gen-lawyer-register` | The Next Generation Lawyer write-up and its Luma registration |
 | `/#legal-geek` · `/#spotdraft` | Past event recaps |
 | `/#contract-automation-for-nigerian-smes` | Any resource: its title in lowercase, with hyphens |
 | `/#resources?q=ransomware` | The Resources section with that search filled in |

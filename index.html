@@ -376,6 +376,8 @@ mark.hl{background:none;color:inherit;text-decoration:underline;text-decoration-
 .post ol.reasons span{color:var(--ink-2);font-size:16px}
 .post .cta{display:flex;gap:12px;flex-wrap:wrap;margin:32px 0 8px;padding:24px;background:var(--paper);border:1px solid var(--line);align-items:center;justify-content:space-between}
 .post .cta p{margin:0;color:var(--carbon);font-weight:500}
+.post ul.topics{margin:0 0 8px;padding-left:20px}
+.post ul.topics li{margin:6px 0;color:var(--ink-2)}
 .post .tags{font-family:var(--mono);font-size:12px;color:var(--greystone);letter-spacing:.04em;margin-top:28px}
 
 /* Cookie consent */
@@ -681,8 +683,14 @@ const LTIC_IMG = "data:image/webp;base64,UklGRiS4AABXRUJQVlA4IBi4AABwjgOdASqEAzg
    image: any image URL (or a file in /assets). register: optional form URL
    (Google Forms: end the link with viewform?embedded=true so it opens on the site).
    ========================================================= */
+/* Luma registration opens on the site via Luma's embed: luma.com/embed/event/<evt-ID>/simple */
+const REG_NEXTGEN = "https://luma.com/embed/event/evt-GCxHreAzGTq2ng8/simple";
 const REG_LTIC = "https://docs.google.com/forms/d/e/1FAIpQLSdGNGMDYW4WeDbPhTX_Vlnb3sF0XtQkwrOYr9YjoEZjndaBwQ/viewform?embedded=true";
 const EVENTS = [
+  {id:"next-gen-lawyer", status:"upcoming", badge:"Registration open", title:"The Next Generation Lawyer: AI, Changing Expectations and the Young Lawyer\'s Place in Practice",
+   location:"Virtual · Google Meet", when:"4 Dec 2026 · 2:00 pm WAT", image:"https://i.ibb.co/YnTjV2Q/Whats-App-Image-2026-11-13-at-22-10-52.jpg", imgPos:"center 30%",
+   summary:"A panel of partners from Banwo & Ighodalo, Aluko & Oyebode, G. Elias and Olaniwun Ajayi on AI, changing expectations and what young lawyers need to build now.",
+   register:REG_NEXTGEN},
   {id:"ltic", status:"upcoming", badge:"Registration open", title:"Legal Tech Innovation Challenge (LTIC) 2.0",
    location:"Lagos, Nigeria", when:"Date to be announced", image:LTIC_IMG, imgPos:"center 45%",
    summary:"Our innovation challenge returns, bigger and in person. Build real solutions to legal and regulatory problems, and compete for cash prizes.",
@@ -697,6 +705,37 @@ const EVENTS = [
 
 /* Full write-ups, opened in the on-site viewer */
 const POSTS = {
+  "next-gen-lawyer": `
+    <img class="hero-img poster" src="https://i.ibb.co/YnTjV2Q/Whats-App-Image-2026-11-13-at-22-10-52.jpg" alt="The Next Generation Lawyer: virtual panel, 4 December 2026">
+    <span class="label" style="color:var(--greenstone)">Upcoming event · Virtual</span>
+    <h2 style="margin-top:14px">The Next Generation Lawyer: AI, Changing Expectations and the Young Lawyer&#39;s Place in Practice</h2>
+    <p class="lead">What will define the next generation of lawyers? As AI changes how legal work gets done, young lawyers face immediate questions about their place in practice.</p>
+    <p>What must they learn now, and how will they build the judgment to advise clients and take responsibility for their work? Partners from four of Nigeria's leading firms join us to discuss responsible AI use, the changing expectations of associates, client service, and the skills young lawyers need to develop. Bring your questions about AI, your work and your place in the profession, and put them directly to the panel.</p>
+    <dl>
+      <dt>Date</dt><dd>Friday 4 December 2026</dd>
+      <dt>Time</dt><dd>2:00 to 3:30 pm WAT (1:00 to 2:30 pm London)</dd>
+      <dt>Format</dt><dd>Virtual, on Google Meet. Registration required</dd>
+      <dt>Presented by</dt><dd>Nigerian LegalTech Network, in collaboration with the NBA Young Lawyers Forum and LegalLiz</dd>
+    </dl>
+    <h3>Panel</h3>
+    <ol class="reasons">
+      <li><div><b>Dr. Isa Alade</b><span>Partner, Banwo &amp; Ighodalo</span></div></li>
+      <li><div><b>Dr. Ajibola Asolo</b><span>Partner, Aluko &amp; Oyebode</span></div></li>
+      <li><div><b>Michelle Chikezie</b><span>Partner, G. Elias</span></div></li>
+      <li><div><b>Damilola Salawu</b><span>Partner, Olaniwun Ajayi</span></div></li>
+    </ol>
+    <dl>
+      <dt>Moderator</dt><dd>Chia Cythia Anyaegbu, LegalTech Consultant and Founder, LegalLiz</dd>
+    </dl>
+    <h3>What we'll cover</h3>
+    <ul class="topics">
+      <li>Using AI responsibly in practice</li>
+      <li>How expectations of associates are changing</li>
+      <li>Client service when clients have AI too</li>
+      <li>The skills young lawyers should be building now</li>
+    </ul>
+    <div class="cta"><p>Join the conversation on 4 December.</p><button class="btn btn-solid" type="button" data-open="next-gen-lawyer-register">Register now <span class="ms" aria-hidden="true">arrow_forward</span></button></div>
+    <p class="tags">#NLTN #LegalTech #LegalAI #YoungLawyers</p>`,
   "ltic": `
     <img class="hero-img poster" src="${LTIC_IMG}" alt="Legal Tech Innovation Challenge 2.0 poster: LTIC 2.0, Lagos, coming soon">
     <span class="label" style="color:var(--greenstone)">Upcoming event · Lagos, Nigeria</span>
@@ -757,6 +796,7 @@ const POSTS = {
    keywords: hidden search terms (laws, organisations, people, topics the document covers)
    ========================================================= */
 const RESOURCES = [
+  {id:"next-gen-lawyer", kind:"post", tag:"event", date:"2026-12-04", day:true, photo:"https://i.ibb.co/YnTjV2Q/Whats-App-Image-2026-11-13-at-22-10-52.jpg", title:"The Next Generation Lawyer: AI, Changing Expectations and the Young Lawyer\'s Place in Practice", summary:"Virtual panel with partners from Banwo & Ighodalo, Aluko & Oyebode, G. Elias and Olaniwun Ajayi. Registration open.", keywords:"webinar, panel, virtual, Google Meet, young lawyers, associates, next generation, responsible AI, client service, skills, careers, NBA Young Lawyers Forum, YLF, LegalLiz, Isa Alade, Ajibola Asolo, Michelle Chikezie, Damilola Salawu, Chia Cythia Anyaegbu, Banwo & Ighodalo, Aluko & Oyebode, G. Elias, Olaniwun Ajayi, Luma"},
   {id:"1_o_D76qzSWohug6f-0XiKuE6fnApRhF7", tag:"article", date:"2026-10-19", title:"Contract Automation for Nigerian SMEs", summary:"Why automated drafting tools struggle where customary law shapes commercial relationships.", keywords:"contract automation, CLM, contract lifecycle management, SMEs, small business, customary law, drafting tools, templates, clause libraries, e-signatures, informal trade, land, family businesses"},
   {id:"legal-geek", kind:"post", tag:"event", date:"2026-10-15", day:true, photo:"https://i.ibb.co/C5mtFHSJ/IMG-3193.jpg", title:"Fireside Chat at Legal Geek: Winning Legal AI Adoption in Emerging Markets", summary:"Our founder on the Disco Stage in London with Aluko & Oyebode and Future Relics.", keywords:"Legal Geek, London, fireside chat, emerging markets, adoption, legal AI, Aluko & Oyebode, Funmilayo Otsemobor, Vaishali Gopal, Future Relics, Chioma Wilson-Dike, Lagos"},
   {id:"ltic", kind:"post", tag:"event", date:"2026-09-22", photo:LTIC_IMG, title:"Legal Tech Innovation Challenge (LTIC) 2.0", summary:"Our innovation challenge returns, in person in Lagos. Registration is open.", keywords:"LTIC, LITC, hackathon, innovation challenge, Lagos, law students, prizes, registration, competition, low-code, code"},
@@ -1270,7 +1310,7 @@ function openItem(key, opts={}){
     html = `<span class="loading">Loading document</span><iframe src="${preview(r.id)}" title="${esc(r.title)}" allow="autoplay"></iframe>`;
   } else if(REGISTER[key]){
     tag = "Registration"; title = REGISTER[key].title;
-    html = `<span class="loading">Loading form</span><iframe src="${REGISTER[key].src}" title="${esc(title)}"></iframe>`;
+    html = `<span class="loading">Loading registration</span><iframe src="${REGISTER[key].src}" title="${esc(title)}" allow="fullscreen; payment"></iframe>`;
   } else if(POLICIES[key]){
     tag = "Legal"; title = POLICIES[key].title;
     html = `<iframe class="policy" title="${esc(title)}"></iframe>`; srcdoc = POLICIES[key].html;
